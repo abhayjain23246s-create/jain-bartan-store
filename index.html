@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Jain Bartan Store | Kitchen & Household Products in Varanasi</title>
+  <title>Jain Bartan Store | Quality Kitchen & Homeware</title>
 
   <meta
     name="description"
-    content="Jain Bartan Store, Rajatalab Ranibazar Varanasi. Shop quality kitchen utensils, cookware, bottles, water coolers and household products."
+    content="Jain Bartan Store - Quality kitchen utensils, cookware and household products."
   >
 
   <style>
@@ -40,7 +40,7 @@
 
     header {
       background: #ffffff;
-      border-bottom: 1px solid #e8e8e8;
+      border-bottom: 1px solid #e5e5e5;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -57,39 +57,17 @@
     }
 
     .logo {
-      text-decoration: none;
-      color: #a71919;
       font-size: 24px;
       font-weight: 800;
+      color: #b21f1f;
       white-space: nowrap;
-    }
-
-    .logo small {
-      display: block;
-      font-size: 11px;
-      color: #777;
-      font-weight: 500;
-      margin-top: -2px;
-    }
-
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .header-link {
-      text-decoration: none;
-      color: #333;
-      font-size: 14px;
-      font-weight: 700;
     }
 
     .cart-button {
       border: none;
-      background: #a71919;
+      background: #b21f1f;
       color: white;
-      padding: 11px 17px;
+      padding: 11px 18px;
       border-radius: 8px;
       cursor: pointer;
       font-weight: 700;
@@ -97,7 +75,7 @@
     }
 
     .cart-button:hover {
-      background: #861414;
+      background: #8f1818;
       transform: translateY(-1px);
     }
 
@@ -106,259 +84,126 @@
     ========================= */
 
     .hero {
-      background:
-        linear-gradient(135deg, #fff3e8 0%, #ffffff 60%, #fff8f2 100%);
-      padding: 75px 20px;
-      border-bottom: 1px solid #eeeeee;
+      background: linear-gradient(135deg, #fff4e8, #ffffff);
+      padding: 70px 20px;
     }
 
     .hero-inner {
       max-width: 1200px;
       margin: auto;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 50px;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
       align-items: center;
     }
 
-    .hero-badge {
-      display: inline-block;
-      background: #fff;
-      border: 1px solid #eadede;
-      color: #a71919;
-      padding: 7px 12px;
-      border-radius: 30px;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-
     .hero h1 {
-      font-size: clamp(40px, 6vw, 68px);
-      line-height: 1.04;
-      letter-spacing: -2px;
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.05;
       margin-bottom: 20px;
     }
 
     .hero h1 span {
-      color: #a71919;
+      color: #b21f1f;
     }
 
     .hero p {
-      max-width: 650px;
       font-size: 18px;
       line-height: 1.7;
-      color: #5c5c5c;
-      margin-bottom: 28px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
+      color: #555;
+      max-width: 650px;
+      margin-bottom: 25px;
     }
 
     .hero-button {
       display: inline-block;
-      background: #a71919;
+      background: #b21f1f;
       color: white;
       text-decoration: none;
       padding: 14px 22px;
       border-radius: 8px;
-      font-weight: 800;
+      font-weight: 700;
       transition: 0.2s;
     }
 
     .hero-button:hover {
-      background: #861414;
+      background: #8f1818;
       transform: translateY(-2px);
     }
 
-    .hero-button.secondary {
-      background: white;
-      color: #222;
-      border: 1px solid #ddd;
-    }
-
-    .hero-button.secondary:hover {
-      background: #f5f5f5;
-    }
-
     .hero-box {
-      min-height: 330px;
+      min-height: 280px;
+      border-radius: 20px;
       background: #ffffff;
-      border: 1px solid #e7e7e7;
-      border-radius: 24px;
+      border: 1px solid #e8e8e8;
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-    }
-
-    .hero-box::before {
-      content: "";
-      position: absolute;
-      width: 230px;
-      height: 230px;
-      background: #fff1e6;
-      border-radius: 50%;
-    }
-
-    .hero-icon {
-      position: relative;
-      z-index: 2;
-      font-size: 125px;
-    }
-
-    .hero-card {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      right: 20px;
-      background: rgba(255,255,255,0.94);
-      border: 1px solid #eee;
-      border-radius: 12px;
-      padding: 13px 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .hero-card strong {
-      font-size: 14px;
-    }
-
-    .hero-card span {
-      color: #777;
-      font-size: 12px;
+      font-size: 100px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
     }
 
     /* =========================
-       QUICK INFO
-    ========================= */
-
-    .quick-info {
-      background: #ffffff;
-      border-bottom: 1px solid #eeeeee;
-    }
-
-    .quick-info-inner {
-      max-width: 1200px;
-      margin: auto;
-      padding: 22px 20px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-    }
-
-    .quick-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 10px;
-    }
-
-    .quick-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      background: #fff1e8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 21px;
-      flex-shrink: 0;
-    }
-
-    .quick-item strong {
-      display: block;
-      font-size: 14px;
-      margin-bottom: 2px;
-    }
-
-    .quick-item span {
-      display: block;
-      color: #777;
-      font-size: 13px;
-    }
-
-    /* =========================
-       GENERAL SECTION
+       COMMON SECTION
     ========================= */
 
     .section {
       max-width: 1200px;
       margin: auto;
-      padding: 65px 20px;
+      padding: 55px 20px;
     }
 
-    .section-heading {
-      margin-bottom: 28px;
-    }
-
-    .section-heading h2 {
-      font-size: 34px;
-      line-height: 1.2;
-      margin-bottom: 7px;
-    }
-
-    .section-heading p {
-      color: #777;
-      font-size: 15px;
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 25px;
     }
 
     /* =========================
-       PRODUCTS
+       PRODUCT CONTROLS
     ========================= */
 
     .controls {
       display: flex;
-      gap: 10px;
+      gap: 12px;
       flex-wrap: wrap;
       margin-bottom: 30px;
     }
 
-    .search-wrap {
-      flex: 1;
-      min-width: 250px;
-      position: relative;
-    }
-
     .search {
-      width: 100%;
+      flex: 1;
+      min-width: 230px;
       padding: 13px 15px;
       border: 1px solid #ddd;
-      border-radius: 9px;
-      background: #fff;
+      border-radius: 8px;
+      font-size: 16px;
       outline: none;
-      font-size: 15px;
+      background: white;
     }
 
     .search:focus {
-      border-color: #a71919;
-      box-shadow: 0 0 0 3px rgba(167, 25, 25, 0.08);
+      border-color: #b21f1f;
+      box-shadow: 0 0 0 3px rgba(178, 31, 31, 0.08);
     }
 
     .category-button {
       padding: 12px 16px;
       border: 1px solid #ddd;
-      background: #fff;
-      color: #333;
-      border-radius: 9px;
+      background: white;
+      border-radius: 8px;
       cursor: pointer;
-      font-weight: 700;
       transition: 0.2s;
     }
 
     .category-button:hover,
     .category-button.active {
-      background: #a71919;
+      background: #b21f1f;
       color: white;
-      border-color: #a71919;
+      border-color: #b21f1f;
     }
+
+    /* =========================
+       PRODUCTS
+    ========================= */
 
     .products {
       display: grid;
@@ -367,27 +212,27 @@
     }
 
     .product {
-      background: #fff;
-      border-radius: 14px;
+      background: white;
+      border-radius: 12px;
       overflow: hidden;
       border: 1px solid #e5e5e5;
-      transition: 0.25s;
+      transition: 0.2s;
       display: flex;
       flex-direction: column;
     }
 
     .product:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
     }
 
     .product-image {
-      height: 235px;
-      background: #f8f8f8;
+      height: 220px;
+      background: #f7f7f7;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 18px;
+      padding: 15px;
       overflow: hidden;
     }
 
@@ -396,189 +241,156 @@
       height: 100%;
       object-fit: contain;
       display: block;
-      transition: 0.25s;
-    }
-
-    .product:hover .product-image img {
-      transform: scale(1.04);
     }
 
     .product-content {
-      padding: 17px;
+      padding: 16px;
       display: flex;
       flex-direction: column;
       flex: 1;
     }
 
     .product h3 {
-      font-size: 17px;
-      margin-bottom: 6px;
+      margin-bottom: 7px;
+      font-size: 18px;
     }
 
     .product-category {
-      font-size: 12px;
+      font-size: 13px;
       color: #777;
       margin-bottom: 12px;
     }
 
     .price {
-      font-size: 21px;
+      font-size: 20px;
       font-weight: 800;
       margin-bottom: 14px;
     }
 
     .add-cart {
       width: 100%;
-      padding: 12px;
+      padding: 11px;
       border: none;
       background: #222;
       color: white;
-      border-radius: 8px;
+      border-radius: 7px;
       cursor: pointer;
-      font-weight: 800;
+      font-weight: 700;
       margin-top: auto;
       transition: 0.2s;
     }
 
     .add-cart:hover {
-      background: #a71919;
+      background: #b21f1f;
     }
 
     .empty {
       color: #777;
-      padding: 30px 0;
-      grid-column: 1 / -1;
-      text-align: center;
+      padding: 20px 0;
     }
 
     /* =========================
        FEATURES
     ========================= */
 
-    .features-section {
+    .features {
       background: #ffffff;
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
+      max-width: none;
+    }
+
+    .features-inner {
+      max-width: 1200px;
+      margin: auto;
     }
 
     .feature-grid {
-      max-width: 1200px;
-      margin: auto;
-      padding: 65px 20px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
     .feature {
-      padding: 28px;
+      padding: 25px;
       border: 1px solid #e5e5e5;
-      border-radius: 14px;
+      border-radius: 12px;
       background: #fff;
     }
 
     .feature-icon {
-      width: 52px;
-      height: 52px;
-      background: #fff1e8;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 25px;
-      margin-bottom: 16px;
+      font-size: 35px;
+      margin-bottom: 12px;
     }
 
     .feature h3 {
-      font-size: 19px;
       margin-bottom: 8px;
     }
 
     .feature p {
       color: #666;
       line-height: 1.6;
-      font-size: 14px;
     }
 
     /* =========================
-       STORE INFORMATION
+       STORE INFO
     ========================= */
 
     .store-section {
-      background: #f7f7f7;
+      background: #fff4e8;
+    }
+
+    .store-inner {
+      max-width: 1200px;
+      margin: auto;
     }
 
     .store-grid {
-      max-width: 1200px;
-      margin: auto;
-      padding: 65px 20px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
 
     .store-card {
-      background: #fff;
-      border: 1px solid #e5e5e5;
-      border-radius: 16px;
-      padding: 30px;
+      background: white;
+      border: 1px solid #eadfd5;
+      border-radius: 14px;
+      padding: 25px;
     }
 
-    .store-card h2 {
-      font-size: 28px;
-      margin-bottom: 22px;
+    .store-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
     }
 
-    .store-detail {
-      display: flex;
-      gap: 14px;
-      padding: 15px 0;
-      border-bottom: 1px solid #eee;
+    .store-card h3 {
+      margin-bottom: 8px;
     }
 
-    .store-detail:last-child {
-      border-bottom: none;
-    }
-
-    .store-detail-icon {
-      font-size: 22px;
-      width: 32px;
-    }
-
-    .store-detail strong {
-      display: block;
-      margin-bottom: 3px;
-    }
-
-    .store-detail span {
+    .store-card p {
       color: #666;
-      font-size: 14px;
+      line-height: 1.6;
     }
 
-    .store-actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 22px;
-    }
-
-    .action-button {
+    .store-button {
       display: inline-block;
+      margin-top: 15px;
+      padding: 11px 16px;
+      background: #b21f1f;
+      color: white;
       text-decoration: none;
-      padding: 12px 16px;
-      border-radius: 8px;
-      font-weight: 800;
-      font-size: 14px;
+      border-radius: 7px;
+      font-weight: 700;
     }
 
-    .action-whatsapp {
-      background: #25D366;
-      color: white;
+    .store-button:hover {
+      background: #8f1818;
     }
 
-    .action-map {
-      background: #a71919;
-      color: white;
+    .whatsapp-small {
+      background: #25d366;
+    }
+
+    .whatsapp-small:hover {
+      background: #1eae54;
     }
 
     /* =========================
@@ -586,50 +398,20 @@
     ========================= */
 
     footer {
-      background: #171717;
+      background: #181818;
       color: white;
-      padding: 45px 20px 30px;
-    }
-
-    .footer-inner {
-      max-width: 1200px;
-      margin: auto;
+      padding: 40px 20px;
       text-align: center;
     }
 
-    footer h2 {
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-
     footer p {
-      color: #aaa;
-      font-size: 14px;
-      margin-top: 6px;
+      color: #bbb;
+      margin-top: 8px;
     }
 
     .footer-contact {
-      margin: 18px 0;
-      color: #ddd;
-    }
-
-    .footer-whatsapp {
-      display: inline-block;
-      background: #25D366;
-      color: white;
-      text-decoration: none;
-      padding: 11px 18px;
-      border-radius: 8px;
-      font-weight: 800;
-      margin-top: 10px;
-    }
-
-    .copyright {
-      border-top: 1px solid #333;
-      margin-top: 25px;
-      padding-top: 20px;
-      color: #888;
-      font-size: 12px;
+      margin-top: 15px;
+      line-height: 1.8;
     }
 
     /* =========================
@@ -639,29 +421,26 @@
     .cart-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.45);
-      z-index: 1900;
-      opacity: 0;
-      visibility: hidden;
-      transition: 0.25s;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: 1500;
+      display: none;
     }
 
-    .cart-overlay.open {
-      opacity: 1;
-      visibility: visible;
+    .cart-overlay.show {
+      display: block;
     }
 
     .cart-panel {
       position: fixed;
-      right: -430px;
+      right: -420px;
       top: 0;
-      width: min(420px, 100%);
+      width: min(400px, 100%);
       height: 100vh;
       background: white;
       z-index: 2000;
-      box-shadow: -12px 0 35px rgba(0,0,0,0.18);
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
       padding: 25px;
-      transition: 0.3s ease;
+      transition: 0.3s;
       overflow-y: auto;
     }
 
@@ -673,45 +452,49 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 22px;
-    }
-
-    .cart-header h2 {
-      font-size: 24px;
+      margin-bottom: 25px;
     }
 
     .close-cart {
       border: none;
       background: #eee;
-      width: 36px;
-      height: 36px;
+      width: 35px;
+      height: 35px;
       border-radius: 50%;
       cursor: pointer;
-      font-size: 20px;
+      font-size: 18px;
+    }
+
+    .close-cart:hover {
+      background: #ddd;
     }
 
     .cart-item {
       border-bottom: 1px solid #eee;
-      padding: 17px 0;
+      padding: 15px 0;
       display: flex;
       justify-content: space-between;
-      gap: 12px;
+      gap: 10px;
+    }
+
+    .cart-item-info {
+      flex: 1;
     }
 
     .cart-item-name {
-      font-weight: 800;
+      font-weight: 700;
       margin-bottom: 4px;
     }
 
     .cart-item-price {
-      color: #666;
-      font-size: 13px;
+      color: #555;
+      font-size: 14px;
     }
 
     .quantity-controls {
       display: flex;
       align-items: center;
-      gap: 9px;
+      gap: 10px;
       margin-top: 10px;
     }
 
@@ -723,88 +506,69 @@
       border-radius: 6px;
       cursor: pointer;
       font-size: 18px;
-      font-weight: 800;
+      font-weight: bold;
+    }
+
+    .quantity-button:hover {
+      background: #ddd;
     }
 
     .remove-button {
       border: none;
-      background: #f1f1f1;
-      padding: 7px 9px;
+      background: #eee;
+      padding: 7px 10px;
       border-radius: 6px;
       cursor: pointer;
       height: fit-content;
-      font-size: 12px;
+    }
+
+    .remove-button:hover {
+      background: #ddd;
     }
 
     .cart-total {
       font-size: 22px;
       font-weight: 800;
       margin: 25px 0;
-      padding-top: 5px;
     }
 
     .whatsapp {
       display: block;
       text-align: center;
       text-decoration: none;
-      background: #25D366;
+      background: #25d366;
       color: white;
       padding: 14px;
-      border-radius: 9px;
+      border-radius: 8px;
       font-weight: 800;
     }
 
-    .whatsapp.disabled {
-      opacity: 0.5;
-      pointer-events: none;
+    .whatsapp:hover {
+      background: #1eae54;
     }
 
     /* =========================
        RESPONSIVE
     ========================= */
 
-    @media (max-width: 1000px) {
-      .products {
-        grid-template-columns: repeat(3, 1fr);
-      }
+    @media (max-width: 900px) {
 
-      .hero-inner {
-        grid-template-columns: 1fr 0.8fr;
-      }
-    }
-
-    @media (max-width: 800px) {
       .hero-inner {
         grid-template-columns: 1fr;
-      }
-
-      .hero-box {
-        min-height: 260px;
       }
 
       .products {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .quick-info-inner {
-        grid-template-columns: 1fr;
-        gap: 3px;
-      }
-
-      .feature-grid {
-        grid-template-columns: 1fr;
-      }
-
+      .feature-grid,
       .store-grid {
         grid-template-columns: 1fr;
-      }
-
-      .header-link {
-        display: none;
       }
     }
 
     @media (max-width: 600px) {
+
       .header-inner {
         padding: 12px 15px;
       }
@@ -813,71 +577,55 @@
         font-size: 19px;
       }
 
-      .logo small {
-        font-size: 9px;
-      }
-
       .cart-button {
-        padding: 10px 12px;
-        font-size: 13px;
+        padding: 9px 13px;
+        font-size: 14px;
       }
 
       .hero {
-        padding: 50px 15px;
+        padding: 45px 15px;
       }
 
       .hero h1 {
-        font-size: 42px;
-        letter-spacing: -1.5px;
+        font-size: 40px;
       }
 
       .hero p {
         font-size: 16px;
       }
 
-      .hero-box {
-        min-height: 220px;
-      }
-
-      .hero-icon {
-        font-size: 90px;
-      }
-
       .section {
-        padding: 45px 15px;
+        padding: 40px 15px;
       }
 
-      .section-heading h2 {
+      .section-title {
         font-size: 28px;
-      }
-
-      .controls {
-        flex-direction: column;
-      }
-
-      .search-wrap {
-        min-width: 100%;
-      }
-
-      .category-button {
-        flex: 1;
       }
 
       .products {
         grid-template-columns: 1fr;
       }
 
+      .hero-box {
+        min-height: 200px;
+        font-size: 75px;
+      }
+
       .product-image {
         height: 250px;
       }
 
-      .feature-grid,
-      .store-grid {
-        padding: 45px 15px;
+      .controls {
+        flex-direction: column;
       }
 
-      .store-card {
-        padding: 22px;
+      .search {
+        width: 100%;
+        min-width: 0;
+      }
+
+      .category-button {
+        width: 100%;
       }
     }
   </style>
@@ -887,37 +635,28 @@
 
   <!-- =========================
        HEADER
-  ========================== -->
+  ========================= -->
 
   <header>
     <div class="header-inner">
 
-      <a href="#" class="logo">
+      <div class="logo">
         Jain Bartan Store
-        <small>Rajatalab Ranibazar, Varanasi</small>
-      </a>
-
-      <div class="header-right">
-
-        <a href="#store" class="header-link">
-          Visit Store
-        </a>
-
-        <button class="cart-button" onclick="openCart()">
-          🛒 Cart (<span id="cartCount">0</span>)
-        </button>
-
       </div>
+
+      <button class="cart-button" onclick="openCart()">
+        🛒 Cart (<span id="cartCount">0</span>)
+      </button>
 
     </div>
   </header>
 
 
-  <!-- =========================
-       HERO
-  ========================== -->
-
   <main>
+
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <section class="hero">
 
@@ -925,111 +664,24 @@
 
         <div>
 
-          <div class="hero-badge">
-            🏪 Trusted Local Store • Varanasi
-          </div>
-
           <h1>
             Quality Bartan for
             <span>Every Kitchen</span>
           </h1>
 
           <p>
-            Discover quality kitchen utensils, cookware, bottles,
-            water coolers and household products at
-            Jain Bartan Store, Rajatalab Ranibazar, Varanasi.
+            Discover quality kitchen utensils, cookware and household
+            products at Jain Bartan Store.
           </p>
 
-          <div class="hero-buttons">
-
-            <a href="#products" class="hero-button">
-              Shop Products
-            </a>
-
-            <a
-              href="https://wa.me/919919326178"
-              target="_blank"
-              class="hero-button secondary"
-            >
-              💬 WhatsApp Us
-            </a>
-
-          </div>
+          <a href="#products" class="hero-button">
+            Shop Products
+          </a>
 
         </div>
-
 
         <div class="hero-box">
-
-          <div class="hero-icon">
-            🍳
-          </div>
-
-          <div class="hero-card">
-
-            <div>
-              <strong>Kitchen & Household Products</strong>
-              <span>Quality products for your everyday needs</span>
-            </div>
-
-            <strong>₹₹</strong>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         QUICK INFORMATION
-    ========================== -->
-
-    <section class="quick-info">
-
-      <div class="quick-info-inner">
-
-        <div class="quick-item">
-
-          <div class="quick-icon">
-            📍
-          </div>
-
-          <div>
-            <strong>Our Location</strong>
-            <span>Rajatalab Ranibazar, Varanasi</span>
-          </div>
-
-        </div>
-
-
-        <div class="quick-item">
-
-          <div class="quick-icon">
-            🕐
-          </div>
-
-          <div>
-            <strong>Shop Timing</strong>
-            <span>Every Day • 7:00 AM – 9:00 PM</span>
-          </div>
-
-        </div>
-
-
-        <div class="quick-item">
-
-          <div class="quick-icon">
-            📱
-          </div>
-
-          <div>
-            <strong>Contact Us</strong>
-            <span>+91 9919326178</span>
-          </div>
-
+          🍳
         </div>
 
       </div>
@@ -1039,35 +691,23 @@
 
     <!-- =========================
          PRODUCTS
-    ========================== -->
+    ========================= -->
 
     <section class="section" id="products">
 
-      <div class="section-heading">
-
-        <h2>Our Products</h2>
-
-        <p>
-          Browse our available kitchen and household products.
-        </p>
-
-      </div>
-
+      <h2 class="section-title">
+        Our Products
+      </h2>
 
       <div class="controls">
 
-        <div class="search-wrap">
-
-          <input
-            type="text"
-            id="search"
-            class="search"
-            placeholder="🔎 Search products..."
-            oninput="filterProducts()"
-          >
-
-        </div>
-
+        <input
+          type="text"
+          id="search"
+          class="search"
+          placeholder="Search products..."
+          oninput="renderProducts()"
+        >
 
         <button
           class="category-button active"
@@ -1099,7 +739,6 @@
 
       </div>
 
-
       <div id="productsGrid" class="products"></div>
 
     </section>
@@ -1107,56 +746,67 @@
 
     <!-- =========================
          FEATURES
-    ========================== -->
+    ========================= -->
 
-    <section class="features-section">
+    <section class="section features">
 
-      <div class="feature-grid">
+      <div class="features-inner">
 
-        <div class="feature">
+        <h2 class="section-title">
+          Why Choose Jain Bartan Store?
+        </h2>
 
-          <div class="feature-icon">
-            ⭐
+        <div class="feature-grid">
+
+          <div class="feature">
+
+            <div class="feature-icon">
+              ⭐
+            </div>
+
+            <h3>
+              Quality Products
+            </h3>
+
+            <p>
+              Carefully selected kitchen and household products.
+            </p>
+
           </div>
 
-          <h3>Quality Products</h3>
 
-          <p>
-            Carefully selected kitchen and household products
-            for everyday use.
-          </p>
+          <div class="feature">
 
-        </div>
+            <div class="feature-icon">
+              🚚
+            </div>
 
+            <h3>
+              Easy Ordering
+            </h3>
 
-        <div class="feature">
+            <p>
+              Browse products and place your order easily.
+            </p>
 
-          <div class="feature-icon">
-            🛒
           </div>
 
-          <h3>Easy Ordering</h3>
 
-          <p>
-            Add your products to the cart and send your complete
-            order directly through WhatsApp.
-          </p>
+          <div class="feature">
 
-        </div>
+            <div class="feature-icon">
+              💬
+            </div>
 
+            <h3>
+              Customer Support
+            </h3>
 
-        <div class="feature">
+            <p>
+              Contact us for product information and orders.
+            </p>
 
-          <div class="feature-icon">
-            💬
           </div>
-
-          <h3>Customer Support</h3>
-
-          <p>
-            Contact Jain Bartan Store for product information,
-            availability and orders.
-          </p>
 
         </div>
 
@@ -1167,147 +817,87 @@
 
     <!-- =========================
          STORE INFORMATION
-    ========================== -->
+    ========================= -->
 
-    <section class="store-section" id="store">
+    <section class="section store-section">
 
-      <div class="store-grid">
+      <div class="store-inner">
 
-        <div class="store-card">
+        <h2 class="section-title">
+          Visit Jain Bartan Store
+        </h2>
 
-          <h2>
-            Visit Jain Bartan Store
-          </h2>
+        <div class="store-grid">
 
+          <div class="store-card">
 
-          <div class="store-detail">
-
-            <div class="store-detail-icon">
+            <div class="store-icon">
               📍
             </div>
 
-            <div>
-              <strong>Store Address</strong>
-              <span>
-                Rajatalab Ranibazar, Varanasi,
-                Uttar Pradesh - 221311
-              </span>
-            </div>
+            <h3>
+              Store Address
+            </h3>
 
-          </div>
-
-
-          <div class="store-detail">
-
-            <div class="store-detail-icon">
-              🕐
-            </div>
-
-            <div>
-              <strong>Shop Timing</strong>
-              <span>
-                Every Day • 7:00 AM to 9:00 PM
-              </span>
-            </div>
-
-          </div>
-
-
-          <div class="store-detail">
-
-            <div class="store-detail-icon">
-              📱
-            </div>
-
-            <div>
-              <strong>Phone / WhatsApp</strong>
-              <span>
-                +91 9919326178
-              </span>
-            </div>
-
-          </div>
-
-
-          <div class="store-actions">
+            <p>
+              Rajatalab Ranibazar, Varanasi<br>
+              Uttar Pradesh - 221311
+            </p>
 
             <a
-              href="https://wa.me/919919326178"
-              target="_blank"
-              class="action-button action-whatsapp"
-            >
-              💬 Chat on WhatsApp
-            </a>
-
-            <a
+              class="store-button"
               href="https://share.google/dyOFfjYIFr9ao2ey3"
               target="_blank"
-              class="action-button action-map"
+              rel="noopener noreferrer"
             >
               📍 Get Directions
             </a>
 
           </div>
 
-        </div>
 
+          <div class="store-card">
 
-        <div class="store-card">
+            <div class="store-icon">
+              🕐
+            </div>
 
-          <h2>
-            Need Help?
-          </h2>
+            <h3>
+              Shop Timing
+            </h3>
 
-          <p style="
-            color:#666;
-            line-height:1.7;
-            margin-bottom:20px;
-          ">
-            Product availability, price or order ke liye
-            directly Jain Bartan Store se WhatsApp par
-            contact karein.
-          </p>
-
-          <div style="
-            background:#f7f7f7;
-            border-radius:12px;
-            padding:20px;
-          ">
-
-            <strong style="
-              display:block;
-              margin-bottom:8px;
-            ">
-              📱 WhatsApp
-            </strong>
-
-            <span style="
-              color:#666;
-              font-size:14px;
-            ">
-              +91 9919326178
-            </span>
+            <p>
+              Every Day<br>
+              <strong>7:00 AM to 9:00 PM</strong>
+            </p>
 
           </div>
 
 
-          <a
-            href="https://wa.me/919919326178"
-            target="_blank"
-            style="
-              display:block;
-              text-align:center;
-              text-decoration:none;
-              background:#25D366;
-              color:white;
-              padding:14px;
-              border-radius:9px;
-              font-weight:800;
-              margin-top:20px;
-            "
-          >
-            Start WhatsApp Chat
-          </a>
+          <div class="store-card">
+
+            <div class="store-icon">
+              📱
+            </div>
+
+            <h3>
+              Contact Us
+            </h3>
+
+            <p>
+              +91 9919326178
+            </p>
+
+            <a
+              class="store-button whatsapp-small"
+              href="https://wa.me/919919326178"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              💬 Chat on WhatsApp
+            </a>
+
+          </div>
 
         </div>
 
@@ -1320,48 +910,41 @@
 
   <!-- =========================
        FOOTER
-  ========================== -->
+  ========================= -->
 
   <footer>
 
-    <div class="footer-inner">
+    <h2>
+      Jain Bartan Store
+    </h2>
 
-      <h2>
-        Jain Bartan Store
-      </h2>
+    <p>
+      Quality kitchen & household products.
+    </p>
 
-      <p>
-        Quality kitchen & household products.
-      </p>
+    <div class="footer-contact">
 
-      <div class="footer-contact">
-        📍 Rajatalab Ranibazar, Varanasi, Uttar Pradesh - 221311
-        <br>
-        🕐 7:00 AM – 9:00 PM
-        <br>
-        📱 +91 9919326178
-      </div>
+      📍 Rajatalab Ranibazar, Varanasi,
+      Uttar Pradesh - 221311
+      <br>
 
-      <a
-        href="https://wa.me/919919326178"
-        target="_blank"
-        class="footer-whatsapp"
-      >
-        💬 WhatsApp Us
-      </a>
+      🕐 7:00 AM to 9:00 PM
+      <br>
 
-      <div class="copyright">
-        © 2026 Jain Bartan Store. All rights reserved.
-      </div>
+      📱 +91 9919326178
 
     </div>
+
+    <p>
+      © 2026 Jain Bartan Store. All rights reserved.
+    </p>
 
   </footer>
 
 
   <!-- =========================
        CART OVERLAY
-  ========================== -->
+  ========================= -->
 
   <div
     id="cartOverlay"
@@ -1372,7 +955,7 @@
 
   <!-- =========================
        CART PANEL
-  ========================== -->
+  ========================= -->
 
   <div id="cartPanel" class="cart-panel">
 
@@ -1391,20 +974,18 @@
 
     </div>
 
-
     <div id="cartItems"></div>
-
 
     <div class="cart-total">
       Total: ₹<span id="cartTotal">0</span>
     </div>
-
 
     <a
       id="whatsappButton"
       class="whatsapp"
       href="#"
       target="_blank"
+      rel="noopener noreferrer"
     >
       Order on WhatsApp
     </a>
@@ -1412,11 +993,38 @@
   </div>
 
 
-  <!-- =========================
-       JAVASCRIPT
-  ========================== -->
-
   <script>
+
+    /*
+    ============================================================
+    PRODUCT MANAGEMENT
+    ============================================================
+
+    FUTURE MEIN PRODUCT ADD / EDIT KARNE KE LIYE
+    SIRF IS LIST KO EDIT KARNA HAI.
+
+    Example:
+
+    {
+      id: 6,
+      name: "New Product",
+      category: "Kitchen",
+      price: 599,
+      image: "images/New Product.png"
+    }
+
+    Categories:
+    - Cookware
+    - Kitchen
+    - Dinnerware
+
+    Image:
+    Apni image ko "images" folder ke andar rakhein.
+    Phir yahan uska exact filename likhein.
+
+    ============================================================
+    */
+
 
     const products = [
 
@@ -1463,14 +1071,22 @@
     ];
 
 
+    /*
+    ============================================================
+    CART SYSTEM
+    ============================================================
+    */
+
     let cart = [];
 
     let currentCategory = "All";
 
 
-    /* =========================
-       RENDER PRODUCTS
-    ========================== */
+    /*
+    ============================================================
+    RENDER PRODUCTS
+    ============================================================
+    */
 
     function renderProducts() {
 
@@ -1492,10 +1108,12 @@
             currentCategory === "All" ||
             product.category === currentCategory;
 
+
           const matchesSearch =
             product.name
               .toLowerCase()
               .includes(search);
+
 
           return matchesCategory && matchesSearch;
 
@@ -1523,6 +1141,7 @@
                 src="${product.image}"
                 alt="${product.name}"
                 loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=&quot;font-size:50px;&quot;>🍳</span>';"
               >
 
             </div>
@@ -1546,7 +1165,7 @@
                 class="add-cart"
                 onclick="addToCart(${product.id})"
               >
-                🛒 Add to Cart
+                Add to Cart
               </button>
 
             </div>
@@ -1558,20 +1177,11 @@
     }
 
 
-    /* =========================
-       SEARCH
-    ========================== */
-
-    function filterProducts() {
-
-      renderProducts();
-
-    }
-
-
-    /* =========================
-       CATEGORY
-    ========================== */
+    /*
+    ============================================================
+    CATEGORY FILTER
+    ============================================================
+    */
 
     function setCategory(category, button) {
 
@@ -1589,19 +1199,27 @@
 
       button.classList.add("active");
 
+
       renderProducts();
 
     }
 
 
-    /* =========================
-       ADD TO CART
-    ========================== */
+    /*
+    ============================================================
+    ADD TO CART
+    ============================================================
+    */
 
     function addToCart(id) {
 
       const product =
         products.find(item => item.id === id);
+
+
+      if (!product) {
+        return;
+      }
 
 
       const existingItem =
@@ -1629,9 +1247,11 @@
     }
 
 
-    /* =========================
-       REMOVE FROM CART
-    ========================== */
+    /*
+    ============================================================
+    REMOVE FROM CART
+    ============================================================
+    */
 
     function removeFromCart(index) {
 
@@ -1642,9 +1262,11 @@
     }
 
 
-    /* =========================
-       CHANGE QUANTITY
-    ========================== */
+    /*
+    ============================================================
+    CHANGE QUANTITY
+    ============================================================
+    */
 
     function changeQuantity(index, change) {
 
@@ -1668,26 +1290,45 @@
     }
 
 
-    /* =========================
-       UPDATE CART
-    ========================== */
+    /*
+    ============================================================
+    UPDATE CART
+    ============================================================
+    */
 
     function updateCart() {
 
       const cartCount =
-        cart.reduce(
-          (sum, item) => sum + item.quantity,
-          0
-        );
-
-
-      document.getElementById("cartCount")
-        .textContent = cartCount;
+        document.getElementById("cartCount");
 
 
       const cartItems =
         document.getElementById("cartItems");
 
+
+      const total =
+        cart.reduce(
+          (sum, item) =>
+            sum + (item.price * item.quantity),
+          0
+        );
+
+
+      const itemCount =
+        cart.reduce(
+          (sum, item) =>
+            sum + item.quantity,
+          0
+        );
+
+
+      cartCount.textContent =
+        itemCount;
+
+
+      /*
+      EMPTY CART
+      */
 
       if (cart.length === 0) {
 
@@ -1701,7 +1342,7 @@
 
             <div class="cart-item">
 
-              <div>
+              <div class="cart-item-info">
 
                 <div class="cart-item-name">
                   ${item.name}
@@ -1709,7 +1350,7 @@
 
                 <div class="cart-item-price">
                   ₹${item.price.toLocaleString("en-IN")}
-                  × ${item.quantity}
+                  each
                 </div>
 
 
@@ -1722,9 +1363,11 @@
                     −
                   </button>
 
+
                   <strong>
                     ${item.quantity}
                   </strong>
+
 
                   <button
                     class="quantity-button"
@@ -1752,24 +1395,19 @@
       }
 
 
-      const total =
-        cart.reduce(
-          (sum, item) =>
-            sum + (item.price * item.quantity),
-          0
-        );
+      /*
+      TOTAL
+      */
 
-
-      document.getElementById("cartTotal")
-        .textContent =
+      document.getElementById("cartTotal").textContent =
         total.toLocaleString("en-IN");
 
 
-      /* =========================
-         WHATSAPP MESSAGE
-      ========================== */
+      /*
+      WHATSAPP ORDER MESSAGE
+      */
 
-      let message;
+      let message = "";
 
 
       if (cart.length === 0) {
@@ -1779,64 +1417,49 @@
 
       } else {
 
-        const orderLines =
-          cart.map((item, index) => {
-
-            return (
-              (index + 1) +
-              ". " +
-              item.name +
-              " - ₹" +
-              item.price.toLocaleString("en-IN") +
-              " × " +
-              item.quantity +
-              " = ₹" +
-              (item.price * item.quantity)
-                .toLocaleString("en-IN")
-            );
-
-          }).join("\n");
-
-
         message =
-          "Hello Jain Bartan Store,\n\n" +
-          "I want to order:\n\n" +
-          orderLines +
-          "\n\nTotal: ₹" +
-          total.toLocaleString("en-IN") +
-          "\n\nPlease confirm my order.";
+          "Hello Jain Bartan Store, I want to order:%0A%0A";
+
+
+        cart.forEach(item => {
+
+          const itemTotal =
+            item.price * item.quantity;
+
+
+          message +=
+            "• " +
+            item.name +
+            " - ₹" +
+            item.price.toLocaleString("en-IN") +
+            " × " +
+            item.quantity +
+            " = ₹" +
+            itemTotal.toLocaleString("en-IN") +
+            "%0A";
+
+        });
+
+
+        message +=
+          "%0A%0ATotal: ₹" +
+          total.toLocaleString("en-IN");
 
       }
 
 
-      const whatsappURL =
+      document.getElementById("whatsappButton").href =
         "https://wa.me/919919326178?text=" +
-        encodeURIComponent(message);
-
-
-      const whatsappButton =
-        document.getElementById("whatsappButton");
-
-
-      whatsappButton.href = whatsappURL;
-
-
-      if (cart.length === 0) {
-
-        whatsappButton.classList.remove("disabled");
-
-      } else {
-
-        whatsappButton.classList.remove("disabled");
-
-      }
+        message;
 
     }
 
 
-    /* =========================
-       OPEN CART
-    ========================== */
+    /*
+    ============================================================
+    OPEN CART
+    ============================================================
+    */
 
     function openCart() {
 
@@ -1847,14 +1470,16 @@
 
       document
         .getElementById("cartOverlay")
-        .classList.add("open");
+        .classList.add("show");
 
     }
 
 
-    /* =========================
-       CLOSE CART
-    ========================== */
+    /*
+    ============================================================
+    CLOSE CART
+    ============================================================
+    */
 
     function closeCart() {
 
@@ -1865,14 +1490,16 @@
 
       document
         .getElementById("cartOverlay")
-        .classList.remove("open");
+        .classList.remove("show");
 
     }
 
 
-    /* =========================
-       INITIAL LOAD
-    ========================== */
+    /*
+    ============================================================
+    INITIAL LOAD
+    ============================================================
+    */
 
     renderProducts();
 
