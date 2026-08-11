@@ -6,10 +6,7 @@
 
   <title>Admin Panel | Jain Bartan Store</title>
 
-  <meta
-    name="robots"
-    content="noindex, nofollow"
-  >
+  <meta name="robots" content="noindex, nofollow">
 
   <style>
     * {
@@ -77,7 +74,7 @@
       border: 1px solid #e3e3e3;
       border-radius: 14px;
       padding: 25px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
     }
 
     .login-card {
@@ -166,6 +163,26 @@
       padding: 9px 13px;
       border-radius: 6px;
       font-weight: 700;
+    }
+
+    .upload-btn {
+      border: none;
+      background: #222;
+      color: white;
+      padding: 11px 16px;
+      border-radius: 7px;
+      font-weight: 700;
+      margin-top: 8px;
+      width: 100%;
+    }
+
+    .upload-btn:hover {
+      background: #000;
+    }
+
+    .upload-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
     }
 
     .message {
@@ -324,11 +341,11 @@
 
     .image-preview {
       width: 100%;
-      height: 150px;
+      height: 180px;
       background: #f7f7f7;
       border: 1px solid #ddd;
       border-radius: 8px;
-      margin-top: 8px;
+      margin-top: 10px;
       display: none;
       align-items: center;
       justify-content: center;
@@ -360,6 +377,28 @@
 
     .checkbox-row input {
       width: auto;
+    }
+
+    .upload-section {
+      margin-top: 10px;
+    }
+
+    .upload-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .file-input {
+      padding: 9px;
+      background: #fafafa;
+    }
+
+    .upload-status {
+      font-size: 12px;
+      color: #666;
+      margin-top: 6px;
     }
 
     @media (max-width: 900px) {
@@ -404,8 +443,12 @@
 
 <body>
 
+  <!-- TOP BAR -->
+
   <div class="topbar">
+
     <div class="topbar-inner">
+
       <div class="brand">
         Jain Bartan Store — Admin
       </div>
@@ -418,7 +461,9 @@
       >
         Logout
       </button>
+
     </div>
+
   </div>
 
 
@@ -435,6 +480,7 @@
       </p>
 
       <div class="form-group">
+
         <label for="loginEmail">
           Email
         </label>
@@ -445,9 +491,12 @@
           placeholder="Admin email"
           autocomplete="email"
         >
+
       </div>
 
+
       <div class="form-group">
+
         <label for="loginPassword">
           Password
         </label>
@@ -458,7 +507,9 @@
           placeholder="Password"
           autocomplete="current-password"
         >
+
       </div>
+
 
       <button
         class="primary-btn"
@@ -466,6 +517,7 @@
       >
         Login
       </button>
+
 
       <div
         id="loginMessage"
@@ -487,6 +539,7 @@
     <div class="stats">
 
       <div class="stat">
+
         <div
           id="totalProducts"
           class="stat-number"
@@ -497,9 +550,12 @@
         <div class="stat-label">
           Total Products
         </div>
+
       </div>
 
+
       <div class="stat">
+
         <div
           id="availableProducts"
           class="stat-number"
@@ -510,9 +566,12 @@
         <div class="stat-label">
           Available Products
         </div>
+
       </div>
 
+
       <div class="stat">
+
         <div
           id="unavailableProducts"
           class="stat-number"
@@ -523,6 +582,7 @@
         <div class="stat-label">
           Unavailable Products
         </div>
+
       </div>
 
     </div>
@@ -541,6 +601,9 @@
           Add New Product
         </h2>
 
+
+        <!-- PRODUCT NAME -->
+
         <div class="form-group">
 
           <label for="productName">
@@ -555,6 +618,8 @@
 
         </div>
 
+
+        <!-- CATEGORY -->
 
         <div class="form-group">
 
@@ -585,6 +650,8 @@
         </div>
 
 
+        <!-- PRICE -->
+
         <div class="form-group">
 
           <label for="productPrice">
@@ -602,6 +669,8 @@
         </div>
 
 
+        <!-- IMAGE URL -->
+
         <div class="form-group">
 
           <label for="productImage">
@@ -615,23 +684,68 @@
             oninput="previewImage()"
           >
 
+          <div class="small-note">
+            Option A: Paste a direct public image URL.
+          </div>
+
+
+          <!-- IMAGE UPLOAD -->
+
+          <div class="upload-section">
+
+            <label
+              for="productImageFile"
+              class="upload-label"
+            >
+              Upload Image
+            </label>
+
+            <input
+              id="productImageFile"
+              class="file-input"
+              type="file"
+              accept="image/*"
+              onchange="uploadProductImage()"
+            >
+
+            <button
+              id="uploadImageButton"
+              type="button"
+              class="upload-btn"
+              onclick="uploadProductImage()"
+            >
+              Upload Image
+            </button>
+
+            <div
+              id="uploadStatus"
+              class="upload-status"
+            >
+              Option B: Select an image from your computer.
+            </div>
+
+          </div>
+
+
+          <!-- IMAGE PREVIEW -->
+
           <div
             id="imagePreview"
             class="image-preview"
           >
+
             <img
               id="previewImageElement"
               src=""
-              alt="Preview"
+              alt="Product Preview"
             >
-          </div>
 
-          <div class="small-note">
-            Paste a direct public image URL.
           </div>
 
         </div>
 
+
+        <!-- DESCRIPTION -->
 
         <div class="form-group">
 
@@ -646,6 +760,8 @@
 
         </div>
 
+
+        <!-- STOCK -->
 
         <div class="form-group">
 
@@ -664,6 +780,8 @@
         </div>
 
 
+        <!-- AVAILABLE -->
+
         <div class="checkbox-row">
 
           <input
@@ -681,6 +799,8 @@
 
         </div>
 
+
+        <!-- FORM BUTTONS -->
 
         <div class="form-actions">
 
@@ -723,9 +843,11 @@
           id="productsList"
           class="products-list"
         >
+
           <div class="loading">
             Loading products...
           </div>
+
         </div>
 
       </div>
@@ -748,6 +870,10 @@
       "sb_publishable_vuUUXCWIdayTjXKajpB8xA_4ZEJiJuM";
 
 
+    const STORAGE_BUCKET =
+      "product-images";
+
+
     /* =========================================
        STATE
     ========================================== */
@@ -765,8 +891,10 @@
 
       return {
         "apikey": SUPABASE_PUBLISHABLE_KEY,
+
         "Authorization":
           "Bearer " + SUPABASE_PUBLISHABLE_KEY,
+
         "Content-Type":
           "application/json"
       };
@@ -798,8 +926,7 @@
 
       element.textContent = "";
 
-      element.className =
-        "message";
+      element.className = "message";
 
     }
 
@@ -894,6 +1021,7 @@
           data.access_token
         );
 
+
         localStorage.setItem(
           "jbs_refresh_token",
           data.refresh_token || ""
@@ -936,6 +1064,7 @@
       const token =
         getAccessToken();
 
+
       return {
         "apikey":
           SUPABASE_PUBLISHABLE_KEY,
@@ -956,13 +1085,16 @@
         .getElementById("loginSection")
         .style.display = "none";
 
+
       document
         .getElementById("dashboard")
         .classList.add("show");
 
+
       document
         .getElementById("logoutButton")
         .style.display = "block";
+
 
       loadProducts();
 
@@ -979,6 +1111,7 @@
         "jbs_refresh_token"
       );
 
+
       location.reload();
 
     }
@@ -994,6 +1127,7 @@
         document.getElementById(
           "productsList"
         );
+
 
       list.innerHTML =
         '<div class="loading">Loading products...</div>';
@@ -1037,12 +1171,13 @@
 
         console.error(error);
 
-        list.innerHTML = `
+        list.innerHTML =
+          `
           <div class="message show error">
             Products load nahi ho pa rahe.
             Please login again.
           </div>
-        `;
+          `;
 
       }
 
@@ -1081,6 +1216,7 @@
               <img
                 src="${escapeHTML(product.image || "")}"
                 alt="${escapeHTML(product.name)}"
+                onerror="this.style.display='none'"
               >
 
             </div>
@@ -1098,6 +1234,7 @@
                 · Stock: ${Number(product.stock || 0)}
               </div>
 
+
               <span
                 class="product-status ${
                   product.available
@@ -1105,11 +1242,13 @@
                     : "unavailable"
                 }"
               >
+
                 ${
                   product.available
                     ? "Available"
                     : "Unavailable"
                 }
+
               </span>
 
             </div>
@@ -1123,6 +1262,7 @@
               >
                 Edit
               </button>
+
 
               <button
                 class="danger-btn"
@@ -1149,10 +1289,12 @@
       const total =
         products.length;
 
+
       const available =
         products.filter(
           product => product.available
         ).length;
+
 
       const unavailable =
         total - available;
@@ -1176,7 +1318,7 @@
 
 
     /* =========================================
-       IMAGE PREVIEW
+       IMAGE URL PREVIEW
     ========================================== */
 
     function previewImage() {
@@ -1187,10 +1329,12 @@
           .value
           .trim();
 
+
       const preview =
         document.getElementById(
           "imagePreview"
         );
+
 
       const image =
         document.getElementById(
@@ -1209,9 +1353,282 @@
       }
 
 
+      image.onload = function () {
+
+        preview.classList.add("show");
+
+      };
+
+
+      image.onerror = function () {
+
+        preview.classList.remove("show");
+
+      };
+
+
       image.src = url;
 
-      preview.classList.add("show");
+    }
+
+
+    /* =========================================
+       UPLOAD PRODUCT IMAGE
+    ========================================== */
+
+    async function uploadProductImage() {
+
+      const fileInput =
+        document.getElementById(
+          "productImageFile"
+        );
+
+
+      const uploadButton =
+        document.getElementById(
+          "uploadImageButton"
+        );
+
+
+      const uploadStatus =
+        document.getElementById(
+          "uploadStatus"
+        );
+
+
+      const file =
+        fileInput.files[0];
+
+
+      if (!file) {
+
+        uploadStatus.textContent =
+          "Pehle image select karein.";
+
+        uploadStatus.style.color =
+          "#a40000";
+
+        return;
+
+      }
+
+
+      if (!file.type.startsWith("image/")) {
+
+        uploadStatus.textContent =
+          "Sirf image file upload karein.";
+
+        uploadStatus.style.color =
+          "#a40000";
+
+        return;
+
+      }
+
+
+      /* Maximum 5 MB */
+
+      const maxSize =
+        5 * 1024 * 1024;
+
+
+      if (file.size > maxSize) {
+
+        uploadStatus.textContent =
+          "Image maximum 5 MB ki honi chahiye.";
+
+        uploadStatus.style.color =
+          "#a40000";
+
+        return;
+
+      }
+
+
+      const token =
+        getAccessToken();
+
+
+      if (!token) {
+
+        uploadStatus.textContent =
+          "Session expire ho gaya. Please login again.";
+
+        uploadStatus.style.color =
+          "#a40000";
+
+        return;
+
+      }
+
+
+      try {
+
+        uploadButton.disabled = true;
+
+        uploadButton.textContent =
+          "Uploading...";
+
+
+        uploadStatus.textContent =
+          "Image upload ho rahi hai...";
+
+        uploadStatus.style.color =
+          "#666";
+
+
+        /*
+          Safe filename
+        */
+
+        const extension =
+          file.name.includes(".")
+            ? file.name.split(".").pop().toLowerCase()
+            : "jpg";
+
+
+        const safeName =
+          file.name
+            .replace(/\.[^/.]+$/, "")
+            .replace(/[^a-zA-Z0-9-_]/g, "-")
+            .substring(0, 60);
+
+
+        const fileName =
+          "product-" +
+          Date.now() +
+          "-" +
+          safeName +
+          "." +
+          extension;
+
+
+        /*
+          Upload to Supabase Storage
+        */
+
+        const uploadResponse =
+          await fetch(
+            SUPABASE_URL +
+            "/storage/v1/object/" +
+            STORAGE_BUCKET +
+            "/" +
+            encodeURIComponent(fileName),
+            {
+              method: "POST",
+
+              headers: {
+                "apikey":
+                  SUPABASE_PUBLISHABLE_KEY,
+
+                "Authorization":
+                  "Bearer " + token,
+
+                "Content-Type":
+                  file.type,
+
+                "x-upsert":
+                  "false"
+              },
+
+              body: file
+            }
+          );
+
+
+        if (!uploadResponse.ok) {
+
+          const errorText =
+            await uploadResponse.text();
+
+          throw new Error(
+            errorText ||
+            "Image upload failed."
+          );
+
+        }
+
+
+        /*
+          Public URL
+        */
+
+        const publicURL =
+          SUPABASE_URL +
+          "/storage/v1/object/public/" +
+          STORAGE_BUCKET +
+          "/" +
+          encodeURIComponent(fileName);
+
+
+        /*
+          Put URL automatically
+          into Image URL box
+        */
+
+        document.getElementById(
+          "productImage"
+        ).value = publicURL;
+
+
+        /*
+          Show preview
+        */
+
+        const preview =
+          document.getElementById(
+            "imagePreview"
+          );
+
+
+        const previewImage =
+          document.getElementById(
+            "previewImageElement"
+          );
+
+
+        previewImage.src =
+          publicURL;
+
+
+        preview.classList.add("show");
+
+
+        uploadStatus.textContent =
+          "Image successfully uploaded ✅";
+
+
+        uploadStatus.style.color =
+          "#176b32";
+
+
+        /*
+          Clear selected file
+        */
+
+        fileInput.value = "";
+
+
+      } catch (error) {
+
+        console.error(error);
+
+        uploadStatus.textContent =
+          "Upload failed: " +
+          (error.message || "Unknown error");
+
+
+        uploadStatus.style.color =
+          "#a40000";
+
+      } finally {
+
+        uploadButton.disabled = false;
+
+        uploadButton.textContent =
+          "Upload Image";
+
+      }
 
     }
 
@@ -1292,6 +1709,7 @@
 
       previewImage();
 
+
       clearMessage("formMessage");
 
 
@@ -1318,10 +1736,12 @@
           .value
           .trim();
 
+
       const category =
         document
           .getElementById("productCategory")
           .value;
+
 
       const price =
         Number(
@@ -1330,11 +1750,13 @@
             .value
         );
 
+
       const image =
         document
           .getElementById("productImage")
           .value
           .trim();
+
 
       const description =
         document
@@ -1342,12 +1764,14 @@
           .value
           .trim();
 
+
       const stock =
         Number(
           document
             .getElementById("productStock")
             .value
         );
+
 
       const available =
         document
@@ -1401,13 +1825,21 @@
 
 
       const productData = {
+
         name: name,
+
         category: category,
+
         price: price,
+
         image: image,
+
         description: description,
+
         stock: stock,
+
         available: available
+
       };
 
 
@@ -1430,6 +1862,7 @@
 
                 headers: {
                   ...authHeaders(),
+
                   "Prefer":
                     "return=representation"
                 },
@@ -1452,6 +1885,7 @@
 
                 headers: {
                   ...authHeaders(),
+
                   "Prefer":
                     "return=representation"
                 },
@@ -1489,6 +1923,7 @@
 
 
         resetForm();
+
 
         await loadProducts();
 
@@ -1544,6 +1979,7 @@
             encodeURIComponent(id),
             {
               method: "DELETE",
+
               headers: authHeaders()
             }
           );
@@ -1615,6 +2051,11 @@
 
 
       document.getElementById(
+        "productImageFile"
+      ).value = "";
+
+
+      document.getElementById(
         "productDescription"
       ).value = "";
 
@@ -1640,11 +2081,25 @@
           "imagePreview"
         );
 
+
       preview.classList.remove("show");
+
 
       document.getElementById(
         "previewImageElement"
       ).src = "";
+
+
+      document.getElementById(
+        "uploadStatus"
+      ).textContent =
+        "Option B: Select an image from your computer.";
+
+
+      document.getElementById(
+        "uploadStatus"
+      ).style.color =
+        "#666";
 
     }
 
