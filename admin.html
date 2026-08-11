@@ -6,7 +6,10 @@
 
   <title>Admin Panel | Jain Bartan Store</title>
 
-  <meta name="robots" content="noindex, nofollow">
+  <meta
+    name="robots"
+    content="noindex, nofollow"
+  >
 
   <style>
     * {
@@ -31,6 +34,11 @@
 
     button {
       cursor: pointer;
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
     }
 
     .topbar {
@@ -74,7 +82,7 @@
       border: 1px solid #e3e3e3;
       border-radius: 14px;
       padding: 25px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.05);
     }
 
     .login-card {
@@ -147,6 +155,10 @@
       font-weight: 700;
     }
 
+    .secondary-btn:hover {
+      background: #000;
+    }
+
     .danger-btn {
       border: none;
       background: #dc3545;
@@ -165,32 +177,13 @@
       font-weight: 700;
     }
 
-    .upload-btn {
-      border: none;
-      background: #222;
-      color: white;
-      padding: 11px 16px;
-      border-radius: 7px;
-      font-weight: 700;
-      margin-top: 8px;
-      width: 100%;
-    }
-
-    .upload-btn:hover {
-      background: #000;
-    }
-
-    .upload-btn:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-
     .message {
       margin-top: 15px;
       padding: 10px 12px;
       border-radius: 7px;
       display: none;
       font-size: 14px;
+      word-break: break-word;
     }
 
     .message.show {
@@ -341,11 +334,11 @@
 
     .image-preview {
       width: 100%;
-      height: 180px;
+      height: 150px;
       background: #f7f7f7;
       border: 1px solid #ddd;
       border-radius: 8px;
-      margin-top: 10px;
+      margin-top: 8px;
       display: none;
       align-items: center;
       justify-content: center;
@@ -368,6 +361,19 @@
       margin-top: 5px;
     }
 
+    .upload-box {
+      margin-top: 10px;
+      padding: 12px;
+      background: #fafafa;
+      border: 1px dashed #ccc;
+      border-radius: 8px;
+    }
+
+    .upload-box input[type="file"] {
+      padding: 8px;
+      background: white;
+    }
+
     .checkbox-row {
       display: flex;
       align-items: center;
@@ -377,28 +383,6 @@
 
     .checkbox-row input {
       width: auto;
-    }
-
-    .upload-section {
-      margin-top: 10px;
-    }
-
-    .upload-label {
-      display: block;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .file-input {
-      padding: 9px;
-      background: #fafafa;
-    }
-
-    .upload-status {
-      font-size: 12px;
-      color: #666;
-      margin-top: 6px;
     }
 
     @media (max-width: 900px) {
@@ -446,7 +430,6 @@
   <!-- TOP BAR -->
 
   <div class="topbar">
-
     <div class="topbar-inner">
 
       <div class="brand">
@@ -463,13 +446,15 @@
       </button>
 
     </div>
-
   </div>
 
 
   <!-- LOGIN -->
 
-  <section id="loginSection" class="container">
+  <section
+    id="loginSection"
+    class="container"
+  >
 
     <div class="login-card">
 
@@ -535,6 +520,8 @@
     id="dashboard"
     class="container dashboard"
   >
+
+    <!-- STATS -->
 
     <div class="stats">
 
@@ -684,6 +671,7 @@
             oninput="previewImage()"
           >
 
+
           <div class="small-note">
             Option A: Paste a direct public image URL.
           </div>
@@ -691,37 +679,32 @@
 
           <!-- IMAGE UPLOAD -->
 
-          <div class="upload-section">
+          <div class="upload-box">
 
-            <label
-              for="productImageFile"
-              class="upload-label"
-            >
+            <label for="productImageFile">
               Upload Image
             </label>
 
             <input
               id="productImageFile"
-              class="file-input"
               type="file"
-              accept="image/*"
-              onchange="uploadProductImage()"
+              accept="image/jpeg,image/png,image/webp"
             >
+
 
             <button
               id="uploadImageButton"
               type="button"
-              class="upload-btn"
+              class="secondary-btn"
+              style="margin-top:8px; width:100%;"
               onclick="uploadProductImage()"
             >
               Upload Image
             </button>
 
-            <div
-              id="uploadStatus"
-              class="upload-status"
-            >
-              Option B: Select an image from your computer.
+
+            <div class="small-note">
+              JPG, PNG or WebP — Maximum 5 MB.
             </div>
 
           </div>
@@ -737,7 +720,7 @@
             <img
               id="previewImageElement"
               src=""
-              alt="Product Preview"
+              alt="Preview"
             >
 
           </div>
@@ -870,10 +853,6 @@
       "sb_publishable_vuUUXCWIdayTjXKajpB8xA_4ZEJiJuM";
 
 
-    const STORAGE_BUCKET =
-      "product-images";
-
-
     /* =========================================
        STATE
     ========================================== */
@@ -926,7 +905,8 @@
 
       element.textContent = "";
 
-      element.className = "message";
+      element.className =
+        "message";
 
     }
 
@@ -1021,7 +1001,6 @@
           data.access_token
         );
 
-
         localStorage.setItem(
           "jbs_refresh_token",
           data.refresh_token || ""
@@ -1064,7 +1043,6 @@
       const token =
         getAccessToken();
 
-
       return {
         "apikey":
           SUPABASE_PUBLISHABLE_KEY,
@@ -1085,16 +1063,13 @@
         .getElementById("loginSection")
         .style.display = "none";
 
-
       document
         .getElementById("dashboard")
         .classList.add("show");
 
-
       document
         .getElementById("logoutButton")
         .style.display = "block";
-
 
       loadProducts();
 
@@ -1111,7 +1086,6 @@
         "jbs_refresh_token"
       );
 
-
       location.reload();
 
     }
@@ -1127,7 +1101,6 @@
         document.getElementById(
           "productsList"
         );
-
 
       list.innerHTML =
         '<div class="loading">Loading products...</div>';
@@ -1171,13 +1144,12 @@
 
         console.error(error);
 
-        list.innerHTML =
-          `
+        list.innerHTML = `
           <div class="message show error">
             Products load nahi ho pa rahe.
             Please login again.
           </div>
-          `;
+        `;
 
       }
 
@@ -1216,7 +1188,7 @@
               <img
                 src="${escapeHTML(product.image || "")}"
                 alt="${escapeHTML(product.name)}"
-                onerror="this.style.display='none'"
+                onerror="this.style.display='none';"
               >
 
             </div>
@@ -1242,13 +1214,11 @@
                     : "unavailable"
                 }"
               >
-
                 ${
                   product.available
                     ? "Available"
                     : "Unavailable"
                 }
-
               </span>
 
             </div>
@@ -1289,12 +1259,10 @@
       const total =
         products.length;
 
-
       const available =
         products.filter(
           product => product.available
         ).length;
-
 
       const unavailable =
         total - available;
@@ -1318,7 +1286,7 @@
 
 
     /* =========================================
-       IMAGE URL PREVIEW
+       IMAGE PREVIEW
     ========================================== */
 
     function previewImage() {
@@ -1329,12 +1297,10 @@
           .value
           .trim();
 
-
       const preview =
         document.getElementById(
           "imagePreview"
         );
-
 
       const image =
         document.getElementById(
@@ -1353,17 +1319,13 @@
       }
 
 
-      image.onload = function () {
-
+      image.onload = function() {
         preview.classList.add("show");
-
       };
 
 
-      image.onerror = function () {
-
+      image.onerror = function() {
         preview.classList.remove("show");
-
       };
 
 
@@ -1373,28 +1335,18 @@
 
 
     /* =========================================
-       UPLOAD PRODUCT IMAGE
+       UPLOAD IMAGE
     ========================================== */
 
     async function uploadProductImage() {
+
+      clearMessage("formMessage");
+
 
       const fileInput =
         document.getElementById(
           "productImageFile"
         );
-
-
-      const uploadButton =
-        document.getElementById(
-          "uploadImageButton"
-        );
-
-
-      const uploadStatus =
-        document.getElementById(
-          "uploadStatus"
-        );
-
 
       const file =
         fileInput.files[0];
@@ -1402,43 +1354,44 @@
 
       if (!file) {
 
-        uploadStatus.textContent =
-          "Pehle image select karein.";
-
-        uploadStatus.style.color =
-          "#a40000";
-
-        return;
-
-      }
-
-
-      if (!file.type.startsWith("image/")) {
-
-        uploadStatus.textContent =
-          "Sirf image file upload karein.";
-
-        uploadStatus.style.color =
-          "#a40000";
+        showMessage(
+          "formMessage",
+          "Pehle image select karein.",
+          "error"
+        );
 
         return;
 
       }
 
 
-      /* Maximum 5 MB */
+      const allowedTypes = [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+      ];
 
-      const maxSize =
-        5 * 1024 * 1024;
+
+      if (!allowedTypes.includes(file.type)) {
+
+        showMessage(
+          "formMessage",
+          "Sirf JPG, PNG ya WebP image upload karein.",
+          "error"
+        );
+
+        return;
+
+      }
 
 
-      if (file.size > maxSize) {
+      if (file.size > 5 * 1024 * 1024) {
 
-        uploadStatus.textContent =
-          "Image maximum 5 MB ki honi chahiye.";
-
-        uploadStatus.style.color =
-          "#a40000";
+        showMessage(
+          "formMessage",
+          "Image size 5 MB se kam honi chahiye.",
+          "error"
+        );
 
         return;
 
@@ -1451,69 +1404,58 @@
 
       if (!token) {
 
-        uploadStatus.textContent =
-          "Session expire ho gaya. Please login again.";
-
-        uploadStatus.style.color =
-          "#a40000";
+        showMessage(
+          "formMessage",
+          "Session expire ho gaya. Please login again.",
+          "error"
+        );
 
         return;
 
       }
 
 
+      const uploadButton =
+        document.getElementById(
+          "uploadImageButton"
+        );
+
+
+      uploadButton.disabled = true;
+
+      uploadButton.textContent =
+        "Uploading...";
+
+
       try {
 
-        uploadButton.disabled = true;
-
-        uploadButton.textContent =
-          "Uploading...";
-
-
-        uploadStatus.textContent =
-          "Image upload ho rahi hai...";
-
-        uploadStatus.style.color =
-          "#666";
-
-
-        /*
-          Safe filename
-        */
-
         const extension =
-          file.name.includes(".")
-            ? file.name.split(".").pop().toLowerCase()
-            : "jpg";
-
-
-        const safeName =
           file.name
-            .replace(/\.[^/.]+$/, "")
-            .replace(/[^a-zA-Z0-9-_]/g, "-")
-            .substring(0, 60);
+            .split(".")
+            .pop()
+            .toLowerCase();
 
 
         const fileName =
-          "product-" +
           Date.now() +
           "-" +
-          safeName +
+          Math.random()
+            .toString(36)
+            .substring(2, 10) +
           "." +
           extension;
 
 
-        /*
-          Upload to Supabase Storage
-        */
+        const filePath =
+          "products/" +
+          fileName;
+
 
         const uploadResponse =
           await fetch(
             SUPABASE_URL +
-            "/storage/v1/object/" +
-            STORAGE_BUCKET +
-            "/" +
-            encodeURIComponent(fileName),
+            "/storage/v1/object/product-images/" +
+            filePath,
             {
               method: "POST",
 
@@ -1549,62 +1491,27 @@
         }
 
 
-        /*
-          Public URL
-        */
-
-        const publicURL =
+        const publicUrl =
           SUPABASE_URL +
-          "/storage/v1/object/public/" +
-          STORAGE_BUCKET +
-          "/" +
-          encodeURIComponent(fileName);
+          "/storage/v1/object/public/product-images/" +
+          filePath;
 
-
-        /*
-          Put URL automatically
-          into Image URL box
-        */
 
         document.getElementById(
           "productImage"
-        ).value = publicURL;
+        ).value =
+          publicUrl;
 
 
-        /*
-          Show preview
-        */
-
-        const preview =
-          document.getElementById(
-            "imagePreview"
-          );
+        previewImage();
 
 
-        const previewImage =
-          document.getElementById(
-            "previewImageElement"
-          );
+        showMessage(
+          "formMessage",
+          "Image upload successful ✅",
+          "success"
+        );
 
-
-        previewImage.src =
-          publicURL;
-
-
-        preview.classList.add("show");
-
-
-        uploadStatus.textContent =
-          "Image successfully uploaded ✅";
-
-
-        uploadStatus.style.color =
-          "#176b32";
-
-
-        /*
-          Clear selected file
-        */
 
         fileInput.value = "";
 
@@ -1613,13 +1520,12 @@
 
         console.error(error);
 
-        uploadStatus.textContent =
-          "Upload failed: " +
-          (error.message || "Unknown error");
-
-
-        uploadStatus.style.color =
-          "#a40000";
+        showMessage(
+          "formMessage",
+          error.message ||
+          "Image upload failed.",
+          "error"
+        );
 
       } finally {
 
@@ -1708,7 +1614,6 @@
 
 
       previewImage();
-
 
       clearMessage("formMessage");
 
@@ -1915,9 +1820,11 @@
 
         showMessage(
           "formMessage",
+
           editingProductId
             ? "Product successfully updated."
             : "Product successfully added.",
+
           "success"
         );
 
@@ -1926,6 +1833,7 @@
 
 
         await loadProducts();
+
 
       } catch (error) {
 
@@ -1979,7 +1887,6 @@
             encodeURIComponent(id),
             {
               method: "DELETE",
-
               headers: authHeaders()
             }
           );
@@ -1999,6 +1906,7 @@
 
 
         await loadProducts();
+
 
       } catch (error) {
 
@@ -2051,11 +1959,6 @@
 
 
       document.getElementById(
-        "productImageFile"
-      ).value = "";
-
-
-      document.getElementById(
         "productDescription"
       ).value = "";
 
@@ -2068,6 +1971,11 @@
       document.getElementById(
         "productAvailable"
       ).checked = true;
+
+
+      document.getElementById(
+        "productImageFile"
+      ).value = "";
 
 
       document.getElementById(
@@ -2088,18 +1996,6 @@
       document.getElementById(
         "previewImageElement"
       ).src = "";
-
-
-      document.getElementById(
-        "uploadStatus"
-      ).textContent =
-        "Option B: Select an image from your computer.";
-
-
-      document.getElementById(
-        "uploadStatus"
-      ).style.color =
-        "#666";
 
     }
 
