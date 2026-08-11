@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Jain Bartan Store | Kitchen & Household Products in Varanasi</title>
+  <title>Jain Bartan Store | Kitchen & Household Products</title>
 
   <meta
     name="description"
-    content="Jain Bartan Store, Rajatalab Ranibazar Varanasi. Quality kitchen utensils, cookware and household products with home delivery and WhatsApp ordering."
+    content="Jain Bartan Store - Quality kitchen utensils, cookware and household products in Rajatalab Ranibazar, Varanasi."
   >
 
-  <meta name="theme-color" content="#9f1d20">
+  <meta name="theme-color" content="#a51d1d">
 
   <style>
     * {
@@ -20,29 +20,14 @@
       padding: 0;
     }
 
-    :root {
-      --primary: #9f1d20;
-      --primary-dark: #7d1518;
-      --secondary: #f7efe7;
-      --dark: #1c1c1c;
-      --text: #252525;
-      --muted: #6d6d6d;
-      --border: #e6e6e6;
-      --white: #ffffff;
-      --green: #20b858;
-      --green-dark: #148c42;
-      --gold: #d99a28;
-      --background: #f7f7f7;
-    }
-
     html {
       scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: var(--background);
-      color: var(--text);
+      background: #f7f7f7;
+      color: #222;
       line-height: 1.5;
     }
 
@@ -53,12 +38,9 @@
       font-family: inherit;
     }
 
-    button {
-      cursor: pointer;
-    }
-
+    button,
     a {
-      color: inherit;
+      -webkit-tap-highlight-color: transparent;
     }
 
     /* =========================
@@ -66,16 +48,15 @@
     ========================= */
 
     header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e5e5;
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255,255,255,0.97);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
     }
 
     .header-inner {
-      max-width: 1250px;
+      max-width: 1200px;
       margin: auto;
       padding: 13px 20px;
       display: flex;
@@ -89,38 +70,34 @@
       align-items: center;
       gap: 11px;
       text-decoration: none;
-      min-width: 0;
+      color: #222;
     }
 
     .brand-logo {
-      width: 46px;
-      height: 46px;
-      border-radius: 12px;
-      background: var(--primary);
-      color: white;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: #a51d1d;
+      color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 25px;
-      box-shadow: 0 6px 18px rgba(159,29,32,0.22);
-      flex-shrink: 0;
+      font-size: 24px;
+      box-shadow: 0 5px 15px rgba(165, 29, 29, 0.25);
     }
 
-    .brand-text {
-      min-width: 0;
+    .brand-text strong {
+      display: block;
+      color: #a51d1d;
+      font-size: 19px;
+      line-height: 1.1;
     }
 
-    .brand-name {
-      font-size: 20px;
-      font-weight: 900;
-      color: var(--primary);
-      white-space: nowrap;
-    }
-
-    .brand-tagline {
-      font-size: 11px;
+    .brand-text span {
+      display: block;
       color: #777;
-      margin-top: 1px;
+      font-size: 11px;
+      margin-top: 2px;
     }
 
     .header-actions {
@@ -129,34 +106,27 @@
       gap: 9px;
     }
 
-    .header-call,
+    .call-button,
     .cart-button {
       border: none;
-      border-radius: 9px;
       padding: 11px 15px;
-      font-weight: 800;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 7px;
+      gap: 6px;
     }
 
-    .header-call {
-      background: #f3f3f3;
-      color: var(--dark);
+    .call-button {
+      background: #f1f1f1;
+      color: #222;
     }
 
     .cart-button {
-      background: var(--primary);
+      background: #a51d1d;
       color: white;
-    }
-
-    .header-call:hover {
-      background: #e8e8e8;
-    }
-
-    .cart-button:hover {
-      background: var(--primary-dark);
     }
 
     /* =========================
@@ -165,204 +135,162 @@
 
     .hero {
       background:
-        radial-gradient(circle at 85% 20%, rgba(159,29,32,0.09), transparent 30%),
-        linear-gradient(135deg, #fff6ed, #ffffff);
-      padding: 72px 20px 75px;
-      overflow: hidden;
+        radial-gradient(circle at 85% 20%, rgba(165,29,29,0.08), transparent 30%),
+        linear-gradient(135deg, #fff5ea, #ffffff);
+      padding: 75px 20px;
     }
 
     .hero-inner {
-      max-width: 1250px;
+      max-width: 1200px;
       margin: auto;
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
-      gap: 55px;
+      gap: 45px;
       align-items: center;
     }
 
     .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 13px;
-      border-radius: 30px;
+      display: inline-block;
       background: #fff;
-      border: 1px solid #eadfd4;
-      color: var(--primary);
+      color: #a51d1d;
+      border: 1px solid #ead3d3;
+      padding: 7px 12px;
+      border-radius: 30px;
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 700;
       margin-bottom: 18px;
     }
 
     .hero h1 {
-      font-size: clamp(40px, 6vw, 68px);
-      line-height: 1.03;
-      letter-spacing: -2px;
+      font-size: clamp(38px, 6vw, 65px);
+      line-height: 1.04;
       margin-bottom: 20px;
+      letter-spacing: -1.5px;
     }
 
     .hero h1 span {
-      color: var(--primary);
+      color: #a51d1d;
     }
 
-    .hero-description {
+    .hero p {
       font-size: 18px;
-      line-height: 1.75;
-      color: #5e5e5e;
-      max-width: 670px;
-      margin-bottom: 27px;
+      line-height: 1.7;
+      color: #555;
+      max-width: 650px;
+      margin-bottom: 26px;
     }
 
-    .hero-actions {
+    .hero-buttons {
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
     }
 
-    .primary-button,
-    .secondary-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      padding: 14px 21px;
-      border-radius: 9px;
-      font-weight: 800;
-      border: none;
-    }
-
-    .primary-button {
-      background: var(--primary);
+    .hero-button {
+      display: inline-block;
+      background: #a51d1d;
       color: white;
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 8px;
+      font-weight: 700;
     }
 
-    .primary-button:hover {
-      background: var(--primary-dark);
+    .hero-whatsapp {
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 8px;
+      font-weight: 700;
     }
 
-    .secondary-button {
-      background: white;
-      border: 1px solid #ddd;
-    }
-
-    .secondary-button:hover {
-      background: #f5f5f5;
-    }
-
-    .hero-card {
-      background: white;
-      border: 1px solid #e9e0d8;
-      border-radius: 26px;
-      padding: 30px;
-      box-shadow: 0 25px 70px rgba(0,0,0,0.09);
-    }
-
-    .hero-icon {
-      height: 285px;
-      border-radius: 20px;
-      background:
-        radial-gradient(circle, rgba(159,29,32,0.09) 1px, transparent 1px);
-      background-size: 18px 18px;
+    .hero-box {
+      min-height: 330px;
+      border-radius: 25px;
+      background: #fff;
+      border: 1px solid #eadfda;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 145px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.09);
       position: relative;
       overflow: hidden;
     }
 
-    .hero-utensils {
-      font-size: 105px;
-      filter: drop-shadow(0 15px 18px rgba(0,0,0,0.15));
-    }
-
-    .hero-card-label {
-      text-align: center;
-      margin-top: 17px;
-      font-weight: 900;
-      font-size: 18px;
-    }
-
-    .hero-card-small {
-      text-align: center;
-      color: #777;
-      font-size: 13px;
-      margin-top: 4px;
+    .hero-box::after {
+      content: "JAIN BARTAN STORE";
+      position: absolute;
+      bottom: 25px;
+      font-size: 15px;
+      letter-spacing: 2px;
+      font-weight: 800;
+      color: #a51d1d;
     }
 
     /* =========================
-       COMMON SECTION
+       GENERAL SECTIONS
     ========================= */
 
     .section {
-      max-width: 1250px;
+      max-width: 1200px;
       margin: auto;
-      padding: 62px 20px;
-    }
-
-    .section-heading {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 20px;
-      margin-bottom: 25px;
+      padding: 60px 20px;
     }
 
     .section-title {
-      font-size: 34px;
-      line-height: 1.15;
-      letter-spacing: -0.5px;
+      font-size: 32px;
+      margin-bottom: 10px;
     }
 
     .section-subtitle {
-      color: var(--muted);
-      font-size: 15px;
-      margin-top: 6px;
+      color: #777;
+      margin-bottom: 28px;
     }
 
     /* =========================
        PRODUCTS
     ========================= */
 
-    .product-controls {
-      background: white;
-      padding: 15px;
-      border: 1px solid var(--border);
-      border-radius: 13px;
-      margin-bottom: 28px;
+    .controls {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
+      margin-bottom: 30px;
     }
 
-    .search-box {
+    .search {
       flex: 1;
-      min-width: 230px;
+      min-width: 240px;
       padding: 13px 15px;
       border: 1px solid #ddd;
       border-radius: 8px;
-      font-size: 15px;
+      font-size: 16px;
       outline: none;
+      background: #fff;
     }
 
-    .search-box:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(159,29,32,0.08);
+    .search:focus {
+      border-color: #a51d1d;
+      box-shadow: 0 0 0 3px rgba(165,29,29,0.08);
     }
 
     .category-button {
-      padding: 12px 15px;
+      padding: 12px 16px;
       border: 1px solid #ddd;
       background: white;
       border-radius: 8px;
-      font-weight: 700;
-      color: #444;
+      cursor: pointer;
+      font-weight: 600;
     }
 
     .category-button:hover,
     .category-button.active {
-      background: var(--primary);
-      border-color: var(--primary);
+      background: #a51d1d;
       color: white;
+      border-color: #a51d1d;
     }
 
     .products {
@@ -373,16 +301,17 @@
 
     .product {
       background: white;
-      border-radius: 15px;
+      border-radius: 14px;
       overflow: hidden;
-      border: 1px solid var(--border);
-      transition: 0.25s ease;
-      position: relative;
+      border: 1px solid #e5e5e5;
+      transition: 0.2s;
+      display: flex;
+      flex-direction: column;
     }
 
     .product:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 16px 35px rgba(0,0,0,0.09);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.09);
     }
 
     .product-image {
@@ -401,7 +330,7 @@
       height: 100%;
       object-fit: contain;
       display: block;
-      transition: transform 0.25s ease;
+      transition: 0.25s;
     }
 
     .product:hover .product-image img {
@@ -409,114 +338,110 @@
     }
 
     .product-content {
-      padding: 17px;
-    }
-
-    .product-category {
-      display: inline-block;
-      font-size: 11px;
-      color: var(--primary);
-      background: #fcecec;
-      border-radius: 20px;
-      padding: 4px 8px;
-      font-weight: 800;
-      margin-bottom: 9px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
 
     .product h3 {
+      margin-bottom: 6px;
       font-size: 18px;
-      line-height: 1.25;
-      margin-bottom: 8px;
+    }
+
+    .product-category {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 9px;
     }
 
     .product-description {
       font-size: 13px;
-      color: #777;
-      min-height: 40px;
+      color: #666;
       margin-bottom: 12px;
+      min-height: 39px;
     }
 
-    .product-price {
+    .price {
       font-size: 21px;
-      font-weight: 900;
+      font-weight: 800;
       margin-bottom: 13px;
     }
 
-    .product-actions {
+    .product-buttons {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 8px;
+      margin-top: auto;
     }
 
     .view-product,
     .add-cart {
+      width: 100%;
       padding: 11px 8px;
-      border-radius: 8px;
-      font-weight: 800;
+      border-radius: 7px;
+      cursor: pointer;
+      font-weight: 700;
       border: none;
-      font-size: 13px;
     }
 
     .view-product {
-      background: #f0f0f0;
+      background: #f1f1f1;
       color: #222;
     }
 
     .add-cart {
-      background: var(--primary);
+      background: #222;
       color: white;
     }
 
-    .view-product:hover {
-      background: #e4e4e4;
-    }
-
     .add-cart:hover {
-      background: var(--primary-dark);
+      background: #a51d1d;
     }
 
-    .empty {
-      color: #777;
-      padding: 30px 0;
-      text-align: center;
-      grid-column: 1 / -1;
+    .view-product:hover {
+      background: #e5e5e5;
     }
 
     /* =========================
-       BENEFITS
+       FEATURES
     ========================= */
 
-    .benefits-section {
-      background: white;
+    .features {
+      background: #fff;
+      max-width: none;
     }
 
-    .benefit-grid {
+    .features-inner {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .feature-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
-    .benefit {
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      padding: 27px;
-      background: white;
+    .feature {
+      padding: 28px;
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      background: #fff;
     }
 
-    .benefit-icon {
-      font-size: 36px;
-      margin-bottom: 13px;
+    .feature-icon {
+      font-size: 35px;
+      margin-bottom: 12px;
     }
 
-    .benefit h3 {
-      margin-bottom: 7px;
-      font-size: 19px;
+    .feature h3 {
+      margin-bottom: 8px;
     }
 
-    .benefit p {
-      color: #6c6c6c;
+    .feature p {
+      color: #666;
       line-height: 1.6;
-      font-size: 14px;
     }
 
     /* =========================
@@ -524,94 +449,68 @@
     ========================= */
 
     .store-section {
-      background: #fff7ef;
+      background: #fff5ea;
     }
 
     .store-grid {
+      max-width: 1200px;
+      margin: auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
     .store-card {
-      background: white;
-      border: 1px solid #eadfd4;
-      border-radius: 15px;
-      padding: 26px;
+      background: #fff;
+      border: 1px solid #eadfda;
+      border-radius: 14px;
+      padding: 25px;
     }
 
     .store-card-icon {
       font-size: 30px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .store-card h3 {
-      font-size: 17px;
       margin-bottom: 8px;
     }
 
     .store-card p {
       color: #666;
       line-height: 1.6;
-      font-size: 14px;
     }
 
     .store-card a {
-      color: var(--primary);
+      color: #a51d1d;
+      font-weight: 700;
       text-decoration: none;
-      font-weight: 800;
     }
 
-    .store-card a:hover {
-      text-decoration: underline;
-    }
-
-    .store-buttons {
-      margin-top: 13px;
+    .store-actions {
+      max-width: 1200px;
+      margin: 25px auto 0;
       display: flex;
-      gap: 8px;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
-    .small-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 12px;
-      border-radius: 7px;
+    .store-action {
+      display: inline-block;
       text-decoration: none;
-      font-size: 12px;
-      font-weight: 800;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: 700;
     }
 
-    .small-button.red {
-      background: var(--primary);
-      color: white;
-    }
-
-    .small-button.green {
-      background: var(--green);
-      color: white;
-    }
-
-    /* =========================
-       SOCIAL
-    ========================= */
-
-    .social-section {
-      text-align: center;
-      background: white;
-    }
-
-    .instagram-button {
-      display: inline-flex;
-      margin-top: 17px;
-      padding: 13px 20px;
-      border-radius: 9px;
+    .maps-button {
       background: #222;
-      color: white;
-      text-decoration: none;
-      font-weight: 800;
+      color: #fff;
+    }
+
+    .whatsapp-button {
+      background: #25D366;
+      color: #fff;
     }
 
     /* =========================
@@ -619,55 +518,39 @@
     ========================= */
 
     footer {
-      background: #171717;
+      background: #181818;
       color: white;
       padding: 45px 20px;
-    }
-
-    .footer-inner {
-      max-width: 1250px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
-      gap: 35px;
-    }
-
-    footer h2,
-    footer h3 {
-      margin-bottom: 10px;
-    }
-
-    footer p {
-      color: #bdbdbd;
-      font-size: 14px;
-      margin-top: 6px;
-    }
-
-    footer a {
-      color: #ddd;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: white;
-      text-decoration: underline;
-    }
-
-    .copyright {
-      max-width: 1250px;
-      margin: 30px auto 0;
-      padding-top: 20px;
-      border-top: 1px solid #333;
-      color: #999;
-      font-size: 13px;
       text-align: center;
     }
 
+    footer p {
+      color: #bbb;
+      margin-top: 7px;
+    }
+
+    .footer-links {
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      background: #292929;
+      padding: 9px 13px;
+      border-radius: 7px;
+      font-size: 14px;
+    }
+
     /* =========================
-       CART DRAWER
+       CART
     ========================= */
 
-    .overlay {
+    .cart-overlay {
       position: fixed;
       inset: 0;
       background: rgba(0,0,0,0.45);
@@ -675,21 +558,21 @@
       display: none;
     }
 
-    .overlay.show {
+    .cart-overlay.show {
       display: block;
     }
 
     .cart-panel {
       position: fixed;
-      right: -470px;
+      right: -430px;
       top: 0;
-      width: min(460px, 100%);
+      width: min(420px, 100%);
       height: 100vh;
       background: white;
       z-index: 2000;
-      box-shadow: -15px 0 45px rgba(0,0,0,0.2);
-      padding: 24px;
-      transition: right 0.3s ease;
+      box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+      padding: 25px;
+      transition: 0.3s;
       overflow-y: auto;
     }
 
@@ -699,220 +582,157 @@
 
     .cart-header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      padding-bottom: 18px;
-      border-bottom: 1px solid #eee;
-      margin-bottom: 10px;
-    }
-
-    .cart-header h2 {
-      font-size: 24px;
+      align-items: center;
+      margin-bottom: 20px;
     }
 
     .close-cart {
-      width: 38px;
-      height: 38px;
       border: none;
       background: #eee;
+      width: 35px;
+      height: 35px;
       border-radius: 50%;
-      font-size: 22px;
+      cursor: pointer;
+      font-size: 20px;
     }
 
     .cart-item {
-      padding: 17px 0;
       border-bottom: 1px solid #eee;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 12px;
+      padding: 16px 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
     }
 
     .cart-item-name {
-      font-weight: 900;
+      font-weight: 800;
+      margin-bottom: 4px;
     }
 
     .cart-item-price {
       color: #666;
-      font-size: 13px;
-      margin-top: 3px;
+      font-size: 14px;
     }
 
-    .quantity-control {
+    .quantity-controls {
       display: flex;
       align-items: center;
       gap: 9px;
       margin-top: 10px;
     }
 
-    .quantity-control button {
-      width: 31px;
-      height: 31px;
+    .quantity-button {
       border: none;
-      border-radius: 6px;
       background: #eee;
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      cursor: pointer;
       font-size: 18px;
-      font-weight: 900;
+      font-weight: bold;
     }
 
-    .remove-item {
+    .remove-button {
       border: none;
-      background: #f1f1f1;
-      padding: 7px 9px;
+      background: #eee;
+      padding: 7px 10px;
       border-radius: 6px;
-      font-size: 12px;
-      font-weight: 700;
+      cursor: pointer;
       height: fit-content;
     }
 
-    .cart-summary {
-      padding-top: 20px;
-    }
-
     .cart-total {
-      display: flex;
-      justify-content: space-between;
       font-size: 22px;
-      font-weight: 900;
-      margin-bottom: 20px;
-    }
-
-    .checkout-form {
-      border-top: 1px solid #eee;
-      padding-top: 20px;
-    }
-
-    .checkout-form h3 {
-      margin-bottom: 12px;
-    }
-
-    .form-group {
-      margin-bottom: 11px;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 12px;
       font-weight: 800;
-      margin-bottom: 5px;
+      margin: 25px 0 18px;
     }
 
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 11px 12px;
-      outline: none;
-      font-size: 14px;
-    }
-
-    .form-group textarea {
-      min-height: 75px;
-      resize: vertical;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      border-color: var(--primary);
-    }
-
-    .order-buttons {
-      display: grid;
-      gap: 9px;
-      margin-top: 15px;
-    }
-
-    .whatsapp-order,
-    .upi-button {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: none;
-      border-radius: 9px;
-      padding: 14px;
-      color: white;
-      font-weight: 900;
-      text-decoration: none;
-    }
-
-    .whatsapp-order {
-      background: var(--green);
-    }
-
-    .whatsapp-order:hover {
-      background: var(--green-dark);
-    }
-
-    .upi-button {
-      background: #222;
-    }
-
-    .upi-button:hover {
-      background: #111;
-    }
-
-    .payment-note {
+    .whatsapp {
+      display: block;
       text-align: center;
-      font-size: 11px;
+      text-decoration: none;
+      background: #25D366;
+      color: white;
+      padding: 14px;
+      border-radius: 8px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .upi-button {
+      display: block;
+      width: 100%;
+      text-align: center;
+      border: none;
+      background: #a51d1d;
+      color: white;
+      padding: 14px;
+      border-radius: 8px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .empty {
       color: #777;
-      margin-top: 9px;
+      padding: 20px 0;
     }
 
     /* =========================
        PRODUCT MODAL
     ========================= */
 
-    .modal {
+    .modal-overlay {
       position: fixed;
       inset: 0;
+      background: rgba(0,0,0,0.55);
       z-index: 3000;
       display: none;
       align-items: center;
       justify-content: center;
       padding: 20px;
-      background: rgba(0,0,0,0.55);
     }
 
-    .modal.show {
+    .modal-overlay.show {
       display: flex;
     }
 
-    .modal-box {
-      background: white;
+    .product-modal {
       width: min(900px, 100%);
-      max-height: 92vh;
+      max-height: 90vh;
       overflow-y: auto;
+      background: white;
       border-radius: 18px;
-      padding: 24px;
       position: relative;
+      padding: 25px;
     }
 
     .modal-close {
       position: absolute;
-      right: 15px;
-      top: 15px;
+      right: 18px;
+      top: 18px;
       width: 38px;
       height: 38px;
       border: none;
       border-radius: 50%;
       background: #eee;
-      font-size: 21px;
-      z-index: 2;
+      cursor: pointer;
+      font-size: 22px;
+      z-index: 5;
     }
 
     .product-detail {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 28px;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
       align-items: center;
     }
 
     .detail-image {
-      height: 390px;
       background: #f7f7f7;
       border-radius: 14px;
-      padding: 20px;
+      min-height: 380px;
+      padding: 25px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -920,31 +740,25 @@
 
     .detail-image img {
       width: 100%;
-      height: 100%;
+      height: 330px;
       object-fit: contain;
     }
 
     .detail-category {
-      display: inline-block;
-      background: #fcecec;
-      color: var(--primary);
-      font-weight: 900;
-      font-size: 12px;
-      padding: 5px 9px;
-      border-radius: 20px;
-      margin-bottom: 10px;
+      color: #a51d1d;
+      font-weight: 700;
+      margin-bottom: 8px;
     }
 
-    .detail-content h2 {
-      font-size: 32px;
-      line-height: 1.15;
+    .detail-title {
+      font-size: 34px;
       margin-bottom: 10px;
     }
 
     .detail-price {
       font-size: 28px;
-      font-weight: 900;
-      margin: 12px 0;
+      font-weight: 800;
+      margin: 15px 0;
     }
 
     .detail-description {
@@ -953,142 +767,96 @@
       margin-bottom: 18px;
     }
 
-    .detail-stock {
-      display: inline-block;
-      color: #168843;
-      background: #eaf8ef;
-      padding: 6px 10px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 900;
-      margin-bottom: 15px;
+    .detail-quantity {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .detail-quantity button {
+      width: 38px;
+      height: 38px;
+      border: none;
+      background: #eee;
+      border-radius: 7px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .detail-quantity strong {
+      min-width: 25px;
+      text-align: center;
     }
 
     .detail-actions {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 10px;
-      flex-wrap: wrap;
+    }
+
+    .detail-cart,
+    .detail-whatsapp {
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .detail-cart {
+      background: #222;
+      color: white;
+    }
+
+    .detail-whatsapp {
+      background: #25D366;
+      color: white;
     }
 
     /* =========================
-       ADMIN PANEL
+       ADMIN
     ========================= */
 
     .admin-section {
-      background: #f0f0f0;
+      display: none;
+      background: #fff;
+    }
+
+    .admin-section.show {
+      display: block;
     }
 
     .admin-box {
-      background: white;
+      max-width: 1200px;
+      margin: auto;
+      background: #f7f7f7;
       border: 1px solid #ddd;
       border-radius: 15px;
       padding: 25px;
     }
 
-    .admin-note {
-      background: #fff8e8;
-      border: 1px solid #f0dfad;
-      border-radius: 9px;
-      padding: 12px;
-      font-size: 13px;
-      color: #70540c;
-      margin-bottom: 20px;
-    }
-
-    .admin-actions {
-      display: flex;
-      gap: 9px;
-      flex-wrap: wrap;
-      margin-bottom: 20px;
-    }
-
-    .admin-button {
-      border: none;
+    .admin-warning {
+      background: #fff4d6;
+      border: 1px solid #f0d38a;
+      padding: 12px 15px;
       border-radius: 8px;
-      padding: 11px 14px;
-      font-weight: 800;
-      background: #222;
-      color: white;
-    }
-
-    .admin-button.red {
-      background: var(--primary);
-    }
-
-    .admin-button.green {
-      background: var(--green);
-    }
-
-    .admin-products {
-      display: grid;
-      gap: 10px;
-    }
-
-    .admin-product-row {
-      display: grid;
-      grid-template-columns: 70px 1fr auto;
-      align-items: center;
-      gap: 15px;
-      padding: 12px;
-      border: 1px solid #eee;
-      border-radius: 10px;
-    }
-
-    .admin-product-row img {
-      width: 70px;
-      height: 55px;
-      object-fit: contain;
-      background: #f5f5f5;
-      border-radius: 7px;
-    }
-
-    .admin-product-name {
-      font-weight: 900;
-    }
-
-    .admin-product-meta {
-      font-size: 12px;
-      color: #777;
-    }
-
-    .admin-row-actions {
-      display: flex;
-      gap: 7px;
-    }
-
-    .admin-edit,
-    .admin-delete {
-      border: none;
-      padding: 8px 10px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 800;
-    }
-
-    .admin-edit {
-      background: #eee;
-    }
-
-    .admin-delete {
-      background: #ffe8e8;
-      color: #a00;
+      color: #6c5312;
+      margin-bottom: 20px;
+      font-size: 14px;
     }
 
     .admin-form {
-      display: none;
-      border-top: 1px solid #eee;
-      padding-top: 20px;
-      margin-top: 20px;
-    }
-
-    .admin-form.show {
-      display: block;
-    }
-
-    .admin-form-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-bottom: 25px;
+    }
+
+    .admin-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
     }
 
     .admin-field.full {
@@ -1096,19 +864,17 @@
     }
 
     .admin-field label {
-      display: block;
-      font-size: 12px;
-      font-weight: 900;
-      margin-bottom: 5px;
+      font-weight: 700;
+      font-size: 14px;
     }
 
     .admin-field input,
     .admin-field textarea,
     .admin-field select {
-      width: 100%;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 11px;
+      border: 1px solid #ccc;
+      padding: 11px 12px;
+      border-radius: 7px;
+      background: white;
       outline: none;
     }
 
@@ -1117,31 +883,58 @@
       resize: vertical;
     }
 
-    /* =========================
-       FLOATING WHATSAPP
-    ========================= */
-
-    .floating-whatsapp {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 1500;
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      background: var(--green);
-      color: white;
+    .admin-buttons {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-size: 26px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
-    .floating-whatsapp:hover {
-      background: var(--green-dark);
-      transform: translateY(-2px);
+    .admin-button {
+      border: none;
+      padding: 11px 17px;
+      border-radius: 7px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .admin-primary {
+      background: #a51d1d;
+      color: white;
+    }
+
+    .admin-secondary {
+      background: #ddd;
+      color: #222;
+    }
+
+    .admin-product-list {
+      margin-top: 25px;
+    }
+
+    .admin-product-row {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 9px;
+      padding: 13px;
+      margin-bottom: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .admin-product-info strong {
+      display: block;
+    }
+
+    .admin-product-info span {
+      color: #777;
+      font-size: 13px;
+    }
+
+    .admin-product-actions {
+      display: flex;
+      gap: 7px;
     }
 
     /* =========================
@@ -1150,18 +943,18 @@
 
     .toast {
       position: fixed;
-      left: 50%;
       bottom: 25px;
+      left: 50%;
       transform: translate(-50%, 120px);
       background: #222;
       color: white;
       padding: 12px 18px;
-      border-radius: 9px;
-      font-size: 13px;
-      font-weight: 800;
+      border-radius: 8px;
       z-index: 5000;
       transition: 0.3s;
       opacity: 0;
+      max-width: 90%;
+      text-align: center;
     }
 
     .toast.show {
@@ -1170,41 +963,43 @@
     }
 
     /* =========================
+       FLOATING WHATSAPP
+    ========================= */
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 27px;
+      box-shadow: 0 7px 20px rgba(0,0,0,0.2);
+      z-index: 1500;
+    }
+
+    /* =========================
        RESPONSIVE
     ========================= */
 
-    @media (max-width: 1050px) {
-      .products {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .hero-inner {
-        gap: 35px;
-      }
-    }
-
-    @media (max-width: 900px) {
+    @media (max-width: 950px) {
       .hero-inner {
         grid-template-columns: 1fr;
-      }
-
-      .hero-card {
-        max-width: 600px;
-        margin: auto;
-        width: 100%;
       }
 
       .products {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .benefit-grid,
+      .feature-grid,
       .store-grid {
         grid-template-columns: 1fr;
-      }
-
-      .footer-inner {
-        grid-template-columns: 1fr 1fr;
       }
 
       .product-detail {
@@ -1212,7 +1007,7 @@
       }
 
       .detail-image {
-        height: 300px;
+        min-height: 300px;
       }
     }
 
@@ -1221,47 +1016,44 @@
         padding: 10px 13px;
       }
 
-      .brand-logo {
-        width: 40px;
-        height: 40px;
-        font-size: 22px;
-      }
-
-      .brand-name {
-        font-size: 17px;
-      }
-
-      .brand-tagline {
+      .brand-text span {
         display: none;
       }
 
-      .header-call {
+      .brand-text strong {
+        font-size: 16px;
+      }
+
+      .brand-logo {
+        width: 39px;
+        height: 39px;
+        font-size: 21px;
+      }
+
+      .call-button {
         display: none;
       }
 
       .cart-button {
         padding: 10px 12px;
+        font-size: 13px;
       }
 
       .hero {
-        padding: 48px 15px 55px;
+        padding: 45px 15px;
       }
 
       .hero h1 {
-        font-size: 43px;
-        letter-spacing: -1.5px;
+        font-size: 42px;
       }
 
-      .hero-description {
+      .hero p {
         font-size: 16px;
       }
 
-      .hero-icon {
-        height: 220px;
-      }
-
-      .hero-utensils {
-        font-size: 80px;
+      .hero-box {
+        min-height: 210px;
+        font-size: 90px;
       }
 
       .section {
@@ -1272,10 +1064,6 @@
         font-size: 28px;
       }
 
-      .section-heading {
-        align-items: flex-start;
-      }
-
       .products {
         grid-template-columns: 1fr;
       }
@@ -1284,11 +1072,11 @@
         height: 250px;
       }
 
-      .footer-inner {
+      .product-buttons {
         grid-template-columns: 1fr;
       }
 
-      .admin-form-grid {
+      .admin-form {
         grid-template-columns: 1fr;
       }
 
@@ -1297,32 +1085,21 @@
       }
 
       .admin-product-row {
-        grid-template-columns: 55px 1fr;
+        align-items: flex-start;
+        flex-direction: column;
       }
 
-      .admin-product-row img {
-        width: 55px;
-        height: 50px;
+      .detail-title {
+        font-size: 28px;
       }
 
-      .admin-row-actions {
-        grid-column: 1 / -1;
+      .detail-actions {
+        grid-template-columns: 1fr;
       }
 
-      .modal {
-        padding: 10px;
-      }
-
-      .modal-box {
-        padding: 17px;
-      }
-
-      .detail-image {
-        height: 230px;
-      }
-
-      .detail-content h2 {
-        font-size: 25px;
+      .floating-whatsapp {
+        right: 15px;
+        bottom: 15px;
       }
     }
   </style>
@@ -1332,7 +1109,7 @@
 
   <!-- =========================
        HEADER
-  ========================= -->
+  ========================== -->
 
   <header>
     <div class="header-inner">
@@ -1341,15 +1118,15 @@
         <div class="brand-logo">🍳</div>
 
         <div class="brand-text">
-          <div class="brand-name">Jain Bartan Store</div>
-          <div class="brand-tagline">Quality Kitchen & Household Products</div>
+          <strong>Jain Bartan Store</strong>
+          <span>Quality Kitchen & Household Products</span>
         </div>
       </a>
 
       <div class="header-actions">
 
         <a
-          class="header-call"
+          class="call-button"
           href="tel:+919919326178"
         >
           📞 Call
@@ -1372,7 +1149,7 @@
 
     <!-- =========================
          HERO
-    ========================= -->
+    ========================== -->
 
     <section class="hero">
 
@@ -1381,7 +1158,7 @@
         <div>
 
           <div class="hero-badge">
-            ⭐ Quality Products • Easy Ordering
+            🏠 Rajatalab Ranibazar, Varanasi
           </div>
 
           <h1>
@@ -1389,25 +1166,25 @@
             <span>Every Kitchen</span>
           </h1>
 
-          <p class="hero-description">
+          <p>
             Discover quality kitchen utensils, cookware and household
-            products at Jain Bartan Store. Visit our store in Rajatalab
-            Ranibazar, Varanasi or order easily through WhatsApp.
+            products at Jain Bartan Store. Easy ordering, free local
+            home delivery and WhatsApp support.
           </p>
 
-          <div class="hero-actions">
+          <div class="hero-buttons">
 
             <a
               href="#products"
-              class="primary-button"
+              class="hero-button"
             >
-              🛍️ Shop Products
+              Shop Products
             </a>
 
             <a
-              href="https://wa.me/919919326178"
+              href="https://wa.me/919919326178?text=Hello%20Jain%20Bartan%20Store,%20I%20want%20to%20know%20about%20your%20products."
               target="_blank"
-              class="secondary-button"
+              class="hero-whatsapp"
             >
               💬 WhatsApp Us
             </a>
@@ -1417,22 +1194,8 @@
         </div>
 
 
-        <div class="hero-card">
-
-          <div class="hero-icon">
-            <div class="hero-utensils">
-              🍳 🥘
-            </div>
-          </div>
-
-          <div class="hero-card-label">
-            Jain Bartan Store
-          </div>
-
-          <div class="hero-card-small">
-            Rajatalab Ranibazar, Varanasi
-          </div>
-
+        <div class="hero-box">
+          🍳
         </div>
 
       </div>
@@ -1442,39 +1205,29 @@
 
     <!-- =========================
          PRODUCTS
-    ========================= -->
+    ========================== -->
 
-    <section
-      class="section"
-      id="products"
-    >
+    <section class="section" id="products">
 
-      <div class="section-heading">
+      <h2 class="section-title">
+        Our Products
+      </h2>
 
-        <div>
-
-          <h2 class="section-title">
-            Our Products
-          </h2>
-
-          <p class="section-subtitle">
-            Browse our kitchen and household collection.
-          </p>
-
-        </div>
-
-      </div>
+      <p class="section-subtitle">
+        Browse our available kitchen and household products.
+      </p>
 
 
-      <div class="product-controls">
+      <div class="controls">
 
         <input
           type="text"
           id="search"
-          class="search-box"
+          class="search"
           placeholder="Search products..."
           oninput="renderProducts()"
         >
+
 
         <button
           class="category-button active"
@@ -1517,34 +1270,26 @@
 
     <!-- =========================
          WHY CHOOSE US
-    ========================= -->
+    ========================== -->
 
-    <section class="benefits-section">
+    <section class="features">
 
-      <div class="section">
+      <div class="section features-inner">
 
-        <div class="section-heading">
+        <h2 class="section-title">
+          Why Choose Jain Bartan Store?
+        </h2>
 
-          <div>
-
-            <h2 class="section-title">
-              Why Choose Jain Bartan Store?
-            </h2>
-
-            <p class="section-subtitle">
-              Simple shopping with direct customer support.
-            </p>
-
-          </div>
-
-        </div>
+        <p class="section-subtitle">
+          Simple ordering and trusted local service.
+        </p>
 
 
-        <div class="benefit-grid">
+        <div class="feature-grid">
 
-          <div class="benefit">
+          <div class="feature">
 
-            <div class="benefit-icon">
+            <div class="feature-icon">
               ⭐
             </div>
 
@@ -1560,9 +1305,9 @@
           </div>
 
 
-          <div class="benefit">
+          <div class="feature">
 
-            <div class="benefit-icon">
+            <div class="feature-icon">
               🚚
             </div>
 
@@ -1571,26 +1316,26 @@
             </h3>
 
             <p>
-              Home delivery available in Rajatalab, Varanasi
+              Home delivery is available in Rajatalab, Varanasi
               and nearby areas.
             </p>
 
           </div>
 
 
-          <div class="benefit">
+          <div class="feature">
 
-            <div class="benefit-icon">
+            <div class="feature-icon">
               💬
             </div>
 
             <h3>
-              Direct WhatsApp Ordering
+              Easy WhatsApp Ordering
             </h3>
 
             <p>
-              Select your products and send the complete order
-              directly to our WhatsApp.
+              Select products, add them to your cart and send
+              your complete order directly on WhatsApp.
             </p>
 
           </div>
@@ -1604,27 +1349,19 @@
 
     <!-- =========================
          STORE INFORMATION
-    ========================= -->
+    ========================== -->
 
     <section class="store-section">
 
       <div class="section">
 
-        <div class="section-heading">
+        <h2 class="section-title">
+          Visit Jain Bartan Store
+        </h2>
 
-          <div>
-
-            <h2 class="section-title">
-              Visit Jain Bartan Store
-            </h2>
-
-            <p class="section-subtitle">
-              Store location, timing and contact information.
-            </p>
-
-          </div>
-
-        </div>
+        <p class="section-subtitle">
+          Visit our store or contact us for product information and orders.
+        </p>
 
 
         <div class="store-grid">
@@ -1640,21 +1377,10 @@
             </h3>
 
             <p>
-              Rajatalab Ranibazar, Varanasi<br>
-              Uttar Pradesh - 221311
+              Rajatalab Ranibazar<br>
+              Varanasi, Uttar Pradesh<br>
+              Pin Code - 221311
             </p>
-
-            <div class="store-buttons">
-
-              <a
-                href="https://share.google/dyOFfjYIFr9ao2ey3"
-                target="_blank"
-                class="small-button red"
-              >
-                📍 Get Directions
-              </a>
-
-            </div>
 
           </div>
 
@@ -1671,7 +1397,7 @@
 
             <p>
               Every Day<br>
-              <strong>7:00 AM to 9:00 PM</strong>
+              7:00 AM to 9:00 PM
             </p>
 
           </div>
@@ -1684,34 +1410,43 @@
             </div>
 
             <h3>
-              Contact Us
+              Contact
             </h3>
 
             <p>
-              +91 9919326178<br>
-              Free Home Delivery available.
+              WhatsApp / Call<br>
+              <a href="tel:+919919326178">
+                +91 9919326178
+              </a>
+              <br><br>
+              <a href="mailto:abhayjain23246s@gmail.com">
+                abhayjain23246s@gmail.com
+              </a>
             </p>
 
-            <div class="store-buttons">
-
-              <a
-                href="tel:+919919326178"
-                class="small-button red"
-              >
-                📞 Call
-              </a>
-
-              <a
-                href="https://wa.me/919919326178"
-                target="_blank"
-                class="small-button green"
-              >
-                💬 WhatsApp
-              </a>
-
-            </div>
-
           </div>
+
+        </div>
+
+
+        <div class="store-actions">
+
+          <a
+            class="store-action maps-button"
+            href="https://share.google/dyOFfjYIFr9ao2ey3"
+            target="_blank"
+          >
+            📍 Get Directions
+          </a>
+
+
+          <a
+            class="store-action whatsapp-button"
+            href="https://wa.me/919919326178?text=Hello%20Jain%20Bartan%20Store,%20I%20want%20to%20know%20about%20your%20products."
+            target="_blank"
+          >
+            💬 Chat on WhatsApp
+          </a>
 
         </div>
 
@@ -1721,107 +1456,46 @@
 
 
     <!-- =========================
-         SOCIAL MEDIA
-    ========================= -->
+         ADMIN / PRODUCT MANAGEMENT
+    ========================== -->
 
-    <section class="social-section">
+    <section
+      id="adminSection"
+      class="admin-section"
+    >
 
       <div class="section">
 
         <h2 class="section-title">
-          Follow Us
+          Product Management
         </h2>
 
         <p class="section-subtitle">
-          Connect with us on Instagram.
+          Add, edit or delete products from this browser.
         </p>
-
-        <a
-          href="https://www.instagram.com/legal_advisor.tushar?igsh=MThwajZoc3pmcDRhZA=="
-          target="_blank"
-          class="instagram-button"
-        >
-          📸 Follow on Instagram
-        </a>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         PRODUCT MANAGEMENT
-    ========================= -->
-
-    <section class="admin-section">
-
-      <div class="section">
-
-        <div class="section-heading">
-
-          <div>
-
-            <h2 class="section-title">
-              Product Management
-            </h2>
-
-            <p class="section-subtitle">
-              Add, edit or remove products from this browser.
-            </p>
-
-          </div>
-
-        </div>
 
 
         <div class="admin-box">
 
-          <div class="admin-note">
-            <strong>Important:</strong>
-            Product changes are currently saved in this browser
-            using local storage. This is a simple management system
-            for now. A secure online admin panel with database can
-            be added in the next stage.
+          <div class="admin-warning">
+            ⚠️ Product changes are currently saved only in this
+            browser using local storage. A future database/admin
+            system can make these changes available to all visitors.
           </div>
 
 
-          <div class="admin-actions">
-
-            <button
-              class="admin-button red"
-              onclick="showAdminForm()"
-            >
-              ➕ Add New Product
-            </button>
-
-            <button
-              class="admin-button"
-              onclick="resetProducts()"
-            >
-              ↩ Reset Default Products
-            </button>
-
-          </div>
-
-
-          <div
-            id="adminProducts"
-            class="admin-products"
-          ></div>
-
-
-          <div
-            id="adminForm"
-            class="admin-form"
+          <form
+            id="productForm"
+            onsubmit="saveProduct(event)"
           >
 
-            <h3 id="adminFormTitle">
-              Add Product
-            </h3>
+            <input
+              type="hidden"
+              id="editProductId"
+            >
 
-            <br>
 
-            <div class="admin-form-grid">
+            <div class="admin-form">
 
               <div class="admin-field">
 
@@ -1830,9 +1504,10 @@
                 </label>
 
                 <input
-                  id="adminName"
                   type="text"
+                  id="adminName"
                   placeholder="Example: Steel Kadhai"
+                  required
                 >
 
               </div>
@@ -1845,10 +1520,11 @@
                 </label>
 
                 <input
-                  id="adminPrice"
                   type="number"
+                  id="adminPrice"
                   placeholder="999"
                   min="0"
+                  required
                 >
 
               </div>
@@ -1882,34 +1558,14 @@
               <div class="admin-field">
 
                 <label>
-                  Stock
-                </label>
-
-                <select id="adminStock">
-
-                  <option value="Available">
-                    Available
-                  </option>
-
-                  <option value="Out of Stock">
-                    Out of Stock
-                  </option>
-
-                </select>
-
-              </div>
-
-
-              <div class="admin-field full">
-
-                <label>
-                  Image Path / Image URL
+                  Image Path / URL
                 </label>
 
                 <input
-                  id="adminImage"
                   type="text"
-                  placeholder="images/Product Name.png"
+                  id="adminImage"
+                  placeholder="images/Product.png"
+                  required
                 >
 
               </div>
@@ -1923,7 +1579,7 @@
 
                 <textarea
                   id="adminDescription"
-                  placeholder="Write a short product description..."
+                  placeholder="Short product description..."
                 ></textarea>
 
               </div>
@@ -1931,28 +1587,32 @@
             </div>
 
 
-            <div
-              class="admin-actions"
-              style="margin-top:18px;margin-bottom:0;"
-            >
+            <div class="admin-buttons">
 
               <button
-                class="admin-button green"
-                onclick="saveProduct()"
+                type="submit"
+                class="admin-button admin-primary"
               >
                 💾 Save Product
               </button>
 
               <button
-                class="admin-button"
-                onclick="hideAdminForm()"
+                type="button"
+                class="admin-button admin-secondary"
+                onclick="resetProductForm()"
               >
-                Cancel
+                Clear Form
               </button>
 
             </div>
 
-          </div>
+          </form>
+
+
+          <div
+            id="adminProductList"
+            class="admin-product-list"
+          ></div>
 
         </div>
 
@@ -1965,118 +1625,83 @@
 
   <!-- =========================
        FOOTER
-  ========================= -->
+  ========================== -->
 
   <footer>
 
-    <div class="footer-inner">
+    <h2>
+      Jain Bartan Store
+    </h2>
 
-      <div>
-
-        <h2>
-          Jain Bartan Store
-        </h2>
-
-        <p>
-          Quality kitchen & household products.
-        </p>
-
-        <p>
-          Rajatalab Ranibazar, Varanasi,
-          Uttar Pradesh - 221311
-        </p>
-
-      </div>
+    <p>
+      Quality kitchen & household products.
+    </p>
 
 
-      <div>
+    <div class="footer-links">
 
-        <h3>
-          Store
-        </h3>
+      <a
+        href="tel:+919919326178"
+      >
+        📞 Call
+      </a>
 
-        <p>
-          🕐 7:00 AM to 9:00 PM
-        </p>
+      <a
+        href="https://wa.me/919919326178?text=Hello%20Jain%20Bartan%20Store,%20I%20want%20to%20know%20about%20your%20products."
+        target="_blank"
+      >
+        💬 WhatsApp
+      </a>
 
-        <p>
-          🚚 Free Home Delivery
-        </p>
+      <a
+        href="https://www.instagram.com/legal_advisor.tushar?igsh=MThwajZoc3pmcDRhZA=="
+        target="_blank"
+      >
+        Instagram
+      </a>
 
-        <p>
-          📱 +91 9919326178
-        </p>
-
-      </div>
-
-
-      <div>
-
-        <h3>
-          Quick Links
-        </h3>
-
-        <p>
-          <a href="#products">
-            Products
-          </a>
-        </p>
-
-        <p>
-          <a
-            href="https://wa.me/919919326178"
-            target="_blank"
-          >
-            WhatsApp
-          </a>
-        </p>
-
-        <p>
-          <a
-            href="https://share.google/dyOFfjYIFr9ao2ey3"
-            target="_blank"
-          >
-            Google Maps
-          </a>
-        </p>
-
-        <p>
-          <a
-            href="https://www.instagram.com/legal_advisor.tushar?igsh=MThwajZoc3pmcDRhZA=="
-            target="_blank"
-          >
-            Instagram
-          </a>
-        </p>
-
-      </div>
+      <a
+        href="mailto:abhayjain23246s@gmail.com"
+      >
+        Email
+      </a>
 
     </div>
 
 
-    <div class="copyright">
+    <p>
+      📍 Rajatalab Ranibazar, Varanasi, Uttar Pradesh - 221311
+    </p>
 
+    <p>
+      🕐 7:00 AM to 9:00 PM
+    </p>
+
+    <p>
+      📱 +91 9919326178
+    </p>
+
+    <p style="margin-top:18px;">
       © 2026 Jain Bartan Store. All rights reserved.
-
-    </div>
+    </p>
 
   </footer>
 
 
   <!-- =========================
-       OVERLAY
-  ========================= -->
+       CART OVERLAY
+  ========================== -->
 
   <div
-    id="overlay"
-    class="overlay"
+    id="cartOverlay"
+    class="cart-overlay"
     onclick="closeCart()"
   ></div>
 
 
   <!-- =========================
-       CART
-  ========================= -->
+       CART PANEL
+  ========================== -->
 
   <div
     id="cartPanel"
@@ -2102,122 +1727,41 @@
     <div id="cartItems"></div>
 
 
-    <div class="cart-summary">
-
-      <div class="cart-total">
-
-        <span>
-          Total
-        </span>
-
-        <span>
-          ₹<span id="cartTotal">0</span>
-        </span>
-
-      </div>
-
-
-      <div class="checkout-form">
-
-        <h3>
-          Customer Details
-        </h3>
-
-
-        <div class="form-group">
-
-          <label>
-            Name
-          </label>
-
-          <input
-            id="customerName"
-            type="text"
-            placeholder="Your name"
-          >
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label>
-            Mobile Number
-          </label>
-
-          <input
-            id="customerPhone"
-            type="tel"
-            placeholder="Your mobile number"
-          >
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label>
-            Delivery Address
-          </label>
-
-          <textarea
-            id="customerAddress"
-            placeholder="Enter your delivery address"
-          ></textarea>
-
-        </div>
-
-
-        <div class="order-buttons">
-
-          <a
-            id="whatsappOrder"
-            class="whatsapp-order"
-            href="#"
-            target="_blank"
-          >
-            💬 Order on WhatsApp
-          </a>
-
-
-          <a
-            id="upiButton"
-            class="upi-button"
-            href="#"
-          >
-            💳 Pay via UPI
-          </a>
-
-        </div>
-
-
-        <div class="payment-note">
-
-          UPI ID: tjain221311@oksbi
-
-        </div>
-
-      </div>
-
+    <div class="cart-total">
+      Total: ₹<span id="cartTotal">0</span>
     </div>
+
+
+    <a
+      id="whatsappButton"
+      class="whatsapp"
+      href="#"
+      target="_blank"
+    >
+      💬 Order on WhatsApp
+    </a>
+
+
+    <button
+      class="upi-button"
+      onclick="payViaUPI()"
+    >
+      💳 Pay via UPI
+    </button>
 
   </div>
 
 
   <!-- =========================
        PRODUCT DETAIL MODAL
-  ========================= -->
+  ========================== -->
 
   <div
     id="productModal"
-    class="modal"
-    onclick="closeProductModal(event)"
+    class="modal-overlay"
   >
 
-    <div
-      class="modal-box"
-      onclick="event.stopPropagation()"
-    >
+    <div class="product-modal">
 
       <button
         class="modal-close"
@@ -2225,6 +1769,7 @@
       >
         ×
       </button>
+
 
       <div
         id="productDetail"
@@ -2238,21 +1783,47 @@
 
   <!-- =========================
        TOAST
-  ========================= -->
+  ========================== -->
 
   <div
     id="toast"
     class="toast"
-  >
-    Product added to cart
-  </div>
+  ></div>
 
 
   <!-- =========================
-       JAVASCRIPT
-  ========================= -->
+       FLOATING WHATSAPP
+  ========================== -->
+
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/919919326178?text=Hello%20Jain%20Bartan%20Store,%20I%20want%20to%20know%20about%20your%20products."
+    target="_blank"
+    aria-label="WhatsApp"
+  >
+    💬
+  </a>
+
 
   <script>
+
+    /* =========================================
+       SHOP INFORMATION
+    ========================================= */
+
+    const SHOP = {
+      name: "Jain Bartan Store",
+      phone: "919919326178",
+      displayPhone: "+91 9919326178",
+      email: "abhayjain23246s@gmail.com",
+      address: "Rajatalab Ranibazar, Varanasi, Uttar Pradesh - 221311",
+      timing: "Every Day, 7:00 AM to 9:00 PM",
+      delivery: "Free",
+      deliveryArea: "Rajatalab, Varanasi and nearby areas",
+      upi: "tjain221311@oksbi",
+      maps: "https://share.google/dyOFfjYIFr9ao2ey3"
+    };
+
 
     /* =========================================
        DEFAULT PRODUCTS
@@ -2266,8 +1837,7 @@
         category: "Cookware",
         price: 899,
         image: "images/Aluminium Bhagona.png",
-        description: "Quality aluminium bhagona suitable for everyday kitchen cooking.",
-        stock: "Available"
+        description: "Quality aluminium bhagona suitable for everyday cooking and household kitchen use."
       },
 
       {
@@ -2276,8 +1846,7 @@
         category: "Kitchen",
         price: 499,
         image: "images/Milton Bottle.png",
-        description: "Useful Milton bottle for carrying and storing drinking water.",
-        stock: "Available"
+        description: "Milton bottle suitable for carrying and storing drinking water."
       },
 
       {
@@ -2286,8 +1855,7 @@
         category: "Kitchen",
         price: 1299,
         image: "images/Milton Water Cooler.png",
-        description: "Practical Milton water cooler for keeping drinking water ready.",
-        stock: "Available"
+        description: "Milton water cooler designed for convenient water storage and serving."
       },
 
       {
@@ -2296,8 +1864,7 @@
         category: "Cookware",
         price: 1499,
         image: "images/Red apple 5L cooker.png",
-        description: "5 litre pressure cooker suitable for everyday family cooking.",
-        stock: "Available"
+        description: "Red Apple 5 litre pressure cooker suitable for everyday family cooking."
       },
 
       {
@@ -2306,49 +1873,47 @@
         category: "Cookware",
         price: 999,
         image: "images/Steel Bhagona.png",
-        description: "Durable steel bhagona designed for regular kitchen use.",
-        stock: "Available"
+        description: "Steel bhagona suitable for regular kitchen cooking and household use."
       }
 
     ];
 
 
     /* =========================================
-       PRODUCT STORAGE
+       LOAD PRODUCTS
     ========================================= */
 
-    let products = loadProducts();
+    let products;
+
+    try {
+
+      const savedProducts =
+        localStorage.getItem("jainBartanProducts");
+
+      products =
+        savedProducts
+          ? JSON.parse(savedProducts)
+          : defaultProducts;
+
+    } catch (error) {
+
+      products = defaultProducts;
+
+    }
+
 
     let cart = [];
 
     let currentCategory = "All";
 
-    let editingProductId = null;
+    let detailProductId = null;
+
+    let detailQuantity = 1;
 
 
-    function loadProducts() {
-
-      try {
-
-        const saved =
-          localStorage.getItem("jainBartanProducts");
-
-        if (saved) {
-
-          return JSON.parse(saved);
-
-        }
-
-      } catch (error) {
-
-        console.log("Could not load products.");
-
-      }
-
-      return [...defaultProducts];
-
-    }
-
+    /* =========================================
+       SAVE PRODUCTS
+    ========================================= */
 
     function saveProductsToStorage() {
 
@@ -2361,7 +1926,49 @@
 
 
     /* =========================================
-       PRODUCT RENDER
+       FORMAT PRICE
+    ========================================= */
+
+    function formatPrice(price) {
+
+      return Number(price).toLocaleString("en-IN");
+
+    }
+
+
+    /* =========================================
+       WHATSAPP URL
+    ========================================= */
+
+    function createWhatsAppURL(message) {
+
+      return (
+        "https://wa.me/" +
+        SHOP.phone +
+        "?text=" +
+        encodeURIComponent(message)
+      );
+
+    }
+
+
+    /* =========================================
+       GENERAL WHATSAPP MESSAGE
+    ========================================= */
+
+    function generalWhatsAppMessage() {
+
+      return (
+        "Hello " +
+        SHOP.name +
+        ", I want to know about your products."
+      );
+
+    }
+
+
+    /* =========================================
+       RENDER PRODUCTS
     ========================================= */
 
     function renderProducts() {
@@ -2380,11 +1987,11 @@
       const filtered =
         products.filter(product => {
 
-          const categoryMatch =
+          const matchesCategory =
             currentCategory === "All" ||
             product.category === currentCategory;
 
-          const searchMatch =
+          const matchesSearch =
             product.name
               .toLowerCase()
               .includes(search) ||
@@ -2392,7 +1999,10 @@
               .toLowerCase()
               .includes(search);
 
-          return categoryMatch && searchMatch;
+          return (
+            matchesCategory &&
+            matchesSearch
+          );
 
         });
 
@@ -2400,7 +2010,7 @@
       if (filtered.length === 0) {
 
         grid.innerHTML =
-          '<div class="empty">No products found.</div>';
+          '<p class="empty">No products found.</p>';
 
         return;
 
@@ -2414,14 +2024,14 @@
 
             <div
               class="product-image"
-              onclick="openProductModal(${product.id})"
+              onclick="openProduct(${product.id})"
             >
 
               <img
                 src="${escapeHTML(product.image)}"
                 alt="${escapeHTML(product.name)}"
                 loading="lazy"
-                onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=&quot;font-size:60px&quot;>🍳</span>';"
+                onerror="this.src='data:image/svg+xml;charset=UTF-8,${createPlaceholderSVG(product.name)}'"
               >
 
             </div>
@@ -2429,37 +2039,41 @@
 
             <div class="product-content">
 
-              <div class="product-category">
-                ${escapeHTML(product.category)}
-              </div>
-
               <h3>
                 ${escapeHTML(product.name)}
               </h3>
 
+
+              <div class="product-category">
+                ${escapeHTML(product.category)}
+              </div>
+
+
               <div class="product-description">
-                ${escapeHTML(product.description || "Quality kitchen product.")}
+                ${escapeHTML(product.description || "Quality product for everyday household use.")}
               </div>
 
-              <div class="product-price">
-                ₹${Number(product.price).toLocaleString("en-IN")}
+
+              <div class="price">
+                ₹${formatPrice(product.price)}
               </div>
 
-              <div class="product-actions">
+
+              <div class="product-buttons">
 
                 <button
                   class="view-product"
-                  onclick="openProductModal(${product.id})"
+                  onclick="openProduct(${product.id})"
                 >
                   View Product
                 </button>
 
+
                 <button
                   class="add-cart"
                   onclick="addToCart(${product.id})"
-                  ${product.stock === "Out of Stock" ? "disabled" : ""}
                 >
-                  ${product.stock === "Out of Stock" ? "Out of Stock" : "Add to Cart"}
+                  Add to Cart
                 </button>
 
               </div>
@@ -2474,6 +2088,44 @@
 
 
     /* =========================================
+       PLACEHOLDER SVG
+    ========================================= */
+
+    function createPlaceholderSVG(name) {
+
+      return encodeURIComponent(`
+        <svg xmlns="http://www.w3.org/2000/svg" width="600" height="500">
+          <rect width="100%" height="100%" fill="#f3f3f3"/>
+          <text x="50%" y="50%" text-anchor="middle"
+            dominant-baseline="middle"
+            font-family="Arial"
+            font-size="28"
+            fill="#777">
+            ${name}
+          </text>
+        </svg>
+      `);
+
+    }
+
+
+    /* =========================================
+       HTML ESCAPE
+    ========================================= */
+
+    function escapeHTML(value) {
+
+      return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
+    }
+
+
+    /* =========================================
        CATEGORY
     ========================================= */
 
@@ -2483,9 +2135,9 @@
 
       document
         .querySelectorAll(".category-button")
-        .forEach(btn => {
-          btn.classList.remove("active");
-        });
+        .forEach(btn =>
+          btn.classList.remove("active")
+        );
 
       button.classList.add("active");
 
@@ -2495,141 +2147,32 @@
 
 
     /* =========================================
-       PRODUCT DETAIL
+       ADD TO CART
     ========================================= */
 
-    function openProductModal(id) {
+    function addToCart(id, quantity = 1) {
 
       const product =
         products.find(item => item.id === id);
 
-      if (!product) return;
-
-
-      const detail =
-        document.getElementById("productDetail");
-
-
-      detail.innerHTML = `
-
-        <div class="detail-image">
-
-          <img
-            src="${escapeHTML(product.image)}"
-            alt="${escapeHTML(product.name)}"
-            onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=&quot;font-size:80px&quot;>🍳</span>';"
-          >
-
-        </div>
-
-
-        <div class="detail-content">
-
-          <div class="detail-category">
-            ${escapeHTML(product.category)}
-          </div>
-
-          <h2>
-            ${escapeHTML(product.name)}
-          </h2>
-
-          <div class="detail-price">
-            ₹${Number(product.price).toLocaleString("en-IN")}
-          </div>
-
-          <div class="detail-stock">
-            ${product.stock === "Available" ? "✓ Available" : "Out of Stock"}
-          </div>
-
-          <p class="detail-description">
-            ${escapeHTML(product.description || "Quality kitchen and household product from Jain Bartan Store.")}
-          </p>
-
-          <p style="color:#777;font-size:14px;margin-bottom:18px;">
-            🚚 Free home delivery in Rajatalab, Varanasi and nearby areas.
-          </p>
-
-          <div class="detail-actions">
-
-            <button
-              class="primary-button"
-              onclick="addToCart(${product.id}); closeProductModal();"
-              ${product.stock === "Out of Stock" ? "disabled" : ""}
-            >
-              🛒 Add to Cart
-            </button>
-
-            <a
-              href="https://wa.me/919919326178"
-              target="_blank"
-              class="secondary-button"
-            >
-              💬 Ask on WhatsApp
-            </a>
-
-          </div>
-
-        </div>
-
-      `;
-
-
-      document
-        .getElementById("productModal")
-        .classList.add("show");
-
-    }
-
-
-    function closeProductModal(event) {
-
-      if (
-        event &&
-        event.target !== document.getElementById("productModal")
-      ) {
+      if (!product) {
         return;
       }
 
-      document
-        .getElementById("productModal")
-        .classList.remove("show");
 
-    }
-
-
-    /* =========================================
-       CART
-    ========================================= */
-
-    function addToCart(id) {
-
-      const product =
-        products.find(item => item.id === id);
-
-      if (!product) return;
-
-      if (product.stock === "Out of Stock") {
-
-        showToast("This product is currently out of stock.");
-
-        return;
-
-      }
-
-
-      const existing =
+      const existingItem =
         cart.find(item => item.id === id);
 
 
-      if (existing) {
+      if (existingItem) {
 
-        existing.quantity += 1;
+        existingItem.quantity += quantity;
 
       } else {
 
         cart.push({
           ...product,
-          quantity: 1
+          quantity: quantity
         });
 
       }
@@ -2637,12 +2180,19 @@
 
       updateCart();
 
-      openCart();
+      showToast(
+        product.name +
+        " added to cart."
+      );
 
-      showToast("Product added to cart.");
+      openCart();
 
     }
 
+
+    /* =========================================
+       REMOVE FROM CART
+    ========================================= */
 
     function removeFromCart(index) {
 
@@ -2653,9 +2203,16 @@
     }
 
 
+    /* =========================================
+       CHANGE CART QUANTITY
+    ========================================= */
+
     function changeQuantity(index, change) {
 
-      if (!cart[index]) return;
+      if (!cart[index]) {
+        return;
+      }
+
 
       cart[index].quantity += change;
 
@@ -2672,21 +2229,29 @@
     }
 
 
+    /* =========================================
+       UPDATE CART
+    ========================================= */
+
     function updateCart() {
 
-      const count =
+      const cartCount =
         cart.reduce(
-          (sum, item) => sum + item.quantity,
+          (sum, item) =>
+            sum + item.quantity,
           0
         );
 
 
-      document.getElementById("cartCount")
-        .textContent = count;
+      document.getElementById(
+        "cartCount"
+      ).textContent = cartCount;
 
 
       const cartItems =
-        document.getElementById("cartItems");
+        document.getElementById(
+          "cartItems"
+        );
 
 
       if (cart.length === 0) {
@@ -2708,23 +2273,30 @@
                 </div>
 
                 <div class="cart-item-price">
-                  ₹${Number(item.price).toLocaleString("en-IN")}
-                  each
+                  ₹${formatPrice(item.price)}
+                  × ${item.quantity}
+                  =
+                  ₹${formatPrice(item.price * item.quantity)}
                 </div>
 
-                <div class="quantity-control">
+
+                <div class="quantity-controls">
 
                   <button
+                    class="quantity-button"
                     onclick="changeQuantity(${index}, -1)"
                   >
                     −
                   </button>
 
+
                   <strong>
                     ${item.quantity}
                   </strong>
 
+
                   <button
+                    class="quantity-button"
                     onclick="changeQuantity(${index}, 1)"
                   >
                     +
@@ -2736,7 +2308,7 @@
 
 
               <button
-                class="remove-item"
+                class="remove-button"
                 onclick="removeFromCart(${index})"
               >
                 Remove
@@ -2752,147 +2324,81 @@
       const total =
         cart.reduce(
           (sum, item) =>
-            sum + Number(item.price) * item.quantity,
+            sum +
+            (Number(item.price) *
+             Number(item.quantity)),
           0
         );
 
 
-      document.getElementById("cartTotal")
-        .textContent =
-        total.toLocaleString("en-IN");
+      document.getElementById(
+        "cartTotal"
+      ).textContent =
+        formatPrice(total);
 
 
-      updateOrderLinks();
+      /* =========================
+         WHATSAPP ORDER MESSAGE
+      ========================= */
 
-    }
-
-
-    /* =========================================
-       ORDER MESSAGE
-    ========================================= */
-
-    function updateOrderLinks() {
-
-      const total =
-        cart.reduce(
-          (sum, item) =>
-            sum + Number(item.price) * item.quantity,
-          0
-        );
-
-
-      const name =
-        document.getElementById("customerName").value.trim();
-
-      const phone =
-        document.getElementById("customerPhone").value.trim();
-
-      const address =
-        document.getElementById("customerAddress").value.trim();
-
-
-      let message =
-        "Hello Jain Bartan Store,%0A%0A";
-
-      message +=
-        "I want to place an order.%0A%0A";
-
-
-      if (name) {
-
-        message +=
-          "Customer Name: " +
-          encodeURIComponent(name) +
-          "%0A";
-
-      }
-
-
-      if (phone) {
-
-        message +=
-          "Mobile: " +
-          encodeURIComponent(phone) +
-          "%0A";
-
-      }
-
-
-      if (address) {
-
-        message +=
-          "Delivery Address: " +
-          encodeURIComponent(address) +
-          "%0A";
-
-      }
-
-
-      message += "%0AProducts:%0A";
+      let message;
 
 
       if (cart.length === 0) {
 
-        message +=
-          "No products selected.%0A";
+        message =
+          generalWhatsAppMessage();
 
       } else {
 
-        cart.forEach(item => {
+        const orderLines =
+          cart.map(item => {
 
-          const itemTotal =
-            Number(item.price) * item.quantity;
+            const itemTotal =
+              Number(item.price) *
+              Number(item.quantity);
 
-          message +=
-            encodeURIComponent(
+            return (
               "• " +
               item.name +
+              " - ₹" +
+              formatPrice(item.price) +
               " × " +
               item.quantity +
               " = ₹" +
-              itemTotal
-            ) +
-            "%0A";
+              formatPrice(itemTotal)
+            );
 
-        });
+          }).join("\n");
 
+
+        message =
+          "Hello " +
+          SHOP.name +
+          ", I want to order:\n\n" +
+          orderLines +
+          "\n\n" +
+          "Total: ₹" +
+          formatPrice(total) +
+          "\n\n" +
+          "Delivery: Free\n" +
+          "Delivery Area: " +
+          SHOP.deliveryArea +
+          "\n\n" +
+          "Please confirm my order.";
       }
 
 
-      message +=
-        "%0ATotal: ₹" +
-        total;
-
-
-      message +=
-        "%0A%0ADelivery: Free";
-
-
-      document.getElementById("whatsappOrder")
-        .href =
-        "https://wa.me/919919326178?text=" +
-        message;
-
-
-      const upiMessage =
-        encodeURIComponent(
-          "Jain Bartan Store Order - Total ₹" +
-          total
-        );
-
-
-      document.getElementById("upiButton")
-        .href =
-        "upi://pay?pa=tjain221311@oksbi&pn=Jain%20Bartan%20Store&am=" +
-        total +
-        "&cu=INR&tn=" +
-        upiMessage;
+      document.getElementById(
+        "whatsappButton"
+      ).href =
+        createWhatsAppURL(message);
 
     }
 
 
     /* =========================================
-       CART OPEN / CLOSE
+       OPEN CART
     ========================================= */
 
     function openCart() {
@@ -2902,13 +2408,15 @@
         .classList.add("open");
 
       document
-        .getElementById("overlay")
+        .getElementById("cartOverlay")
         .classList.add("show");
-
-      updateOrderLinks();
 
     }
 
+
+    /* =========================================
+       CLOSE CART
+    ========================================= */
 
     function closeCart() {
 
@@ -2917,261 +2425,458 @@
         .classList.remove("open");
 
       document
-        .getElementById("overlay")
+        .getElementById("cartOverlay")
         .classList.remove("show");
 
     }
 
 
     /* =========================================
-       CUSTOMER INPUT EVENTS
+       PRODUCT DETAIL
     ========================================= */
 
-    [
-      "customerName",
-      "customerPhone",
-      "customerAddress"
-    ].forEach(id => {
-
-      document
-        .getElementById(id)
-        .addEventListener(
-          "input",
-          updateOrderLinks
-        );
-
-    });
-
-
-    /* =========================================
-       ADMIN PANEL
-    ========================================= */
-
-    function renderAdminProducts() {
-
-      const container =
-        document.getElementById("adminProducts");
-
-
-      if (products.length === 0) {
-
-        container.innerHTML =
-          '<p class="empty">No products available.</p>';
-
-        return;
-
-      }
-
-
-      container.innerHTML =
-        products.map(product => `
-
-          <div class="admin-product-row">
-
-            <img
-              src="${escapeHTML(product.image)}"
-              alt=""
-              onerror="this.style.display='none'"
-            >
-
-            <div>
-
-              <div class="admin-product-name">
-                ${escapeHTML(product.name)}
-              </div>
-
-              <div class="admin-product-meta">
-                ${escapeHTML(product.category)}
-                • ₹${Number(product.price).toLocaleString("en-IN")}
-                • ${escapeHTML(product.stock)}
-              </div>
-
-            </div>
-
-
-            <div class="admin-row-actions">
-
-              <button
-                class="admin-edit"
-                onclick="editProduct(${product.id})"
-              >
-                Edit
-              </button>
-
-              <button
-                class="admin-delete"
-                onclick="deleteProduct(${product.id})"
-              >
-                Delete
-              </button>
-
-            </div>
-
-          </div>
-
-        `).join("");
-
-    }
-
-
-    function showAdminForm() {
-
-      editingProductId = null;
-
-      document.getElementById("adminFormTitle")
-        .textContent = "Add Product";
-
-
-      document.getElementById("adminName").value = "";
-
-      document.getElementById("adminPrice").value = "";
-
-      document.getElementById("adminCategory").value =
-        "Cookware";
-
-      document.getElementById("adminStock").value =
-        "Available";
-
-      document.getElementById("adminImage").value = "";
-
-      document.getElementById("adminDescription").value = "";
-
-
-      document
-        .getElementById("adminForm")
-        .classList.add("show");
-
-      document
-        .getElementById("adminForm")
-        .scrollIntoView({
-          behavior: "smooth",
-          block: "center"
-        });
-
-    }
-
-
-    function hideAdminForm() {
-
-      document
-        .getElementById("adminForm")
-        .classList.remove("show");
-
-      editingProductId = null;
-
-    }
-
-
-    function editProduct(id) {
+    function openProduct(id) {
 
       const product =
         products.find(item => item.id === id);
 
-      if (!product) return;
+      if (!product) {
+        return;
+      }
 
 
-      editingProductId = id;
+      detailProductId = id;
+
+      detailQuantity = 1;
 
 
-      document.getElementById("adminFormTitle")
-        .textContent = "Edit Product";
+      const detail =
+        document.getElementById(
+          "productDetail"
+        );
 
 
-      document.getElementById("adminName").value =
-        product.name;
+      detail.innerHTML = `
 
-      document.getElementById("adminPrice").value =
-        product.price;
+        <div class="detail-image">
 
-      document.getElementById("adminCategory").value =
-        product.category;
+          <img
+            src="${escapeHTML(product.image)}"
+            alt="${escapeHTML(product.name)}"
+            onerror="this.src='data:image/svg+xml;charset=UTF-8,${createPlaceholderSVG(product.name)}'"
+          >
 
-      document.getElementById("adminStock").value =
-        product.stock;
+        </div>
 
-      document.getElementById("adminImage").value =
-        product.image;
 
-      document.getElementById("adminDescription").value =
-        product.description || "";
+        <div>
+
+          <div class="detail-category">
+            ${escapeHTML(product.category)}
+          </div>
+
+
+          <h2 class="detail-title">
+            ${escapeHTML(product.name)}
+          </h2>
+
+
+          <div class="detail-price">
+            ₹${formatPrice(product.price)}
+          </div>
+
+
+          <p class="detail-description">
+            ${escapeHTML(
+              product.description ||
+              "Quality product for everyday household use."
+            )}
+          </p>
+
+
+          <p style="margin-bottom:15px;color:#555;">
+            🚚 Free home delivery available in
+            ${escapeHTML(SHOP.deliveryArea)}.
+          </p>
+
+
+          <div class="detail-quantity">
+
+            <button onclick="changeDetailQuantity(-1)">
+              −
+            </button>
+
+            <strong id="detailQuantity">
+              1
+            </strong>
+
+            <button onclick="changeDetailQuantity(1)">
+              +
+            </button>
+
+          </div>
+
+
+          <div class="detail-actions">
+
+            <button
+              class="detail-cart"
+              onclick="addDetailToCart()"
+            >
+              🛒 Add to Cart
+            </button>
+
+
+            <button
+              class="detail-whatsapp"
+              onclick="askProductOnWhatsApp()"
+            >
+              💬 Ask on WhatsApp
+            </button>
+
+          </div>
+
+        </div>
+
+      `;
 
 
       document
-        .getElementById("adminForm")
+        .getElementById("productModal")
         .classList.add("show");
-
-
-      document
-        .getElementById("adminForm")
-        .scrollIntoView({
-          behavior: "smooth",
-          block: "center"
-        });
 
     }
 
 
-    function saveProduct() {
+    /* =========================================
+       CLOSE PRODUCT MODAL
+    ========================================= */
+
+    function closeProductModal() {
+
+      document
+        .getElementById("productModal")
+        .classList.remove("show");
+
+    }
+
+
+    /* =========================================
+       DETAIL QUANTITY
+    ========================================= */
+
+    function changeDetailQuantity(change) {
+
+      detailQuantity += change;
+
+
+      if (detailQuantity < 1) {
+        detailQuantity = 1;
+      }
+
+
+      document.getElementById(
+        "detailQuantity"
+      ).textContent =
+        detailQuantity;
+
+    }
+
+
+    /* =========================================
+       ADD DETAIL PRODUCT TO CART
+    ========================================= */
+
+    function addDetailToCart() {
+
+      if (!detailProductId) {
+        return;
+      }
+
+
+      addToCart(
+        detailProductId,
+        detailQuantity
+      );
+
+
+      closeProductModal();
+
+    }
+
+
+    /* =========================================
+       PRODUCT WHATSAPP
+    ========================================= */
+
+    function askProductOnWhatsApp() {
+
+      const product =
+        products.find(
+          item => item.id === detailProductId
+        );
+
+
+      if (!product) {
+        return;
+      }
+
+
+      const total =
+        Number(product.price) *
+        detailQuantity;
+
+
+      const message =
+        "Hello " +
+        SHOP.name +
+        ", I want to know/order this product:\n\n" +
+
+        "Product: " +
+        product.name +
+        "\n" +
+
+        "Category: " +
+        product.category +
+        "\n" +
+
+        "Price: ₹" +
+        formatPrice(product.price) +
+        "\n" +
+
+        "Quantity: " +
+        detailQuantity +
+        "\n" +
+
+        "Total: ₹" +
+        formatPrice(total) +
+        "\n\n" +
+
+        "Delivery: Free\n" +
+
+        "Please confirm availability.";
+
+
+      const url =
+        createWhatsAppURL(message);
+
+
+      window.open(
+        url,
+        "_blank"
+      );
+
+    }
+
+
+    /* =========================================
+       UPI PAYMENT
+    ========================================= */
+
+    function payViaUPI() {
+
+      if (cart.length === 0) {
+
+        showToast(
+          "Please add a product to your cart first."
+        );
+
+        return;
+
+      }
+
+
+      const total =
+        cart.reduce(
+          (sum, item) =>
+            sum +
+            Number(item.price) *
+            Number(item.quantity),
+          0
+        );
+
+
+      const upiURL =
+        "upi://pay" +
+        "?pa=" +
+        encodeURIComponent(SHOP.upi) +
+        "&pn=" +
+        encodeURIComponent(SHOP.name) +
+        "&am=" +
+        encodeURIComponent(total.toFixed(2)) +
+        "&cu=INR" +
+        "&tn=" +
+        encodeURIComponent(
+          "Jain Bartan Store Order"
+        );
+
+
+      window.location.href =
+        upiURL;
+
+    }
+
+
+    /* =========================================
+       ADMIN - TOGGLE
+    ========================================= */
+
+    function toggleAdmin() {
+
+      const section =
+        document.getElementById(
+          "adminSection"
+        );
+
+
+      section.classList.toggle("show");
+
+
+      if (
+        section.classList.contains("show")
+      ) {
+
+        renderAdminProducts();
+
+        section.scrollIntoView({
+          behavior: "smooth"
+        });
+
+      }
+
+    }
+
+
+    /* =========================================
+       ADMIN PRODUCT LIST
+    ========================================= */
+
+    function renderAdminProducts() {
+
+      const list =
+        document.getElementById(
+          "adminProductList"
+        );
+
+
+      list.innerHTML = `
+
+        <h3 style="margin-bottom:15px;">
+          Current Products
+        </h3>
+
+        ${
+          products.map(product => `
+
+            <div class="admin-product-row">
+
+              <div class="admin-product-info">
+
+                <strong>
+                  ${escapeHTML(product.name)}
+                </strong>
+
+                <span>
+                  ${escapeHTML(product.category)}
+                  • ₹${formatPrice(product.price)}
+                </span>
+
+              </div>
+
+
+              <div class="admin-product-actions">
+
+                <button
+                  class="admin-button admin-secondary"
+                  onclick="editProduct(${product.id})"
+                >
+                  ✏️ Edit
+                </button>
+
+
+                <button
+                  class="admin-button admin-secondary"
+                  onclick="deleteProduct(${product.id})"
+                >
+                  🗑️ Delete
+                </button>
+
+              </div>
+
+            </div>
+
+          `).join("")
+        }
+
+      `;
+
+    }
+
+
+    /* =========================================
+       ADMIN SAVE PRODUCT
+    ========================================= */
+
+    function saveProduct(event) {
+
+      event.preventDefault();
+
+
+      const idValue =
+        document.getElementById(
+          "editProductId"
+        ).value;
+
 
       const name =
-        document.getElementById("adminName")
-          .value.trim();
+        document.getElementById(
+          "adminName"
+        ).value.trim();
+
 
       const price =
         Number(
-          document.getElementById("adminPrice")
-            .value
+          document.getElementById(
+            "adminPrice"
+          ).value
         );
 
-      const category =
-        document.getElementById("adminCategory")
-          .value;
 
-      const stock =
-        document.getElementById("adminStock")
-          .value;
+      const category =
+        document.getElementById(
+          "adminCategory"
+        ).value;
+
 
       const image =
-        document.getElementById("adminImage")
-          .value.trim();
+        document.getElementById(
+          "adminImage"
+        ).value.trim();
+
 
       const description =
-        document.getElementById("adminDescription")
-          .value.trim();
+        document.getElementById(
+          "adminDescription"
+        ).value.trim();
 
 
-      if (!name) {
+      if (!name || !price || !image) {
 
-        alert("Please enter product name.");
-
-        return;
-
-      }
-
-
-      if (!price || price < 0) {
-
-        alert("Please enter a valid price.");
+        showToast(
+          "Please fill all required fields."
+        );
 
         return;
 
       }
 
 
-      if (!image) {
-
-        alert("Please enter product image path or URL.");
-
-        return;
-
-      }
-
-
-      if (editingProductId !== null) {
+      if (idValue) {
 
         const product =
           products.find(
-            item => item.id === editingProductId
+            item =>
+              item.id === Number(idValue)
           );
 
 
@@ -3180,16 +2885,15 @@
           product.name = name;
           product.price = price;
           product.category = category;
-          product.stock = stock;
           product.image = image;
-          product.description =
-            description ||
-            "Quality kitchen and household product.";
+          product.description = description;
 
         }
 
 
-        showToast("Product updated successfully.");
+        showToast(
+          "Product updated successfully."
+        );
 
       } else {
 
@@ -3198,50 +2902,128 @@
           id:
             Date.now(),
 
-          name,
+          name:
+            name,
 
-          category,
+          category:
+            category,
 
-          price,
+          price:
+            price,
 
-          image,
+          image:
+            image,
 
           description:
             description ||
-            "Quality kitchen and household product.",
-
-          stock
+            "Quality product for everyday household use."
 
         };
 
 
-        products.push(newProduct);
+        products.push(
+          newProduct
+        );
 
-        showToast("New product added successfully.");
+
+        showToast(
+          "New product added successfully."
+        );
 
       }
 
 
       saveProductsToStorage();
 
+      resetProductForm();
+
       renderProducts();
 
       renderAdminProducts();
 
-      hideAdminForm();
+    }
+
+
+    /* =========================================
+       ADMIN EDIT
+    ========================================= */
+
+    function editProduct(id) {
+
+      const product =
+        products.find(
+          item => item.id === id
+        );
+
+
+      if (!product) {
+        return;
+      }
+
+
+      document.getElementById(
+        "editProductId"
+      ).value =
+        product.id;
+
+
+      document.getElementById(
+        "adminName"
+      ).value =
+        product.name;
+
+
+      document.getElementById(
+        "adminPrice"
+      ).value =
+        product.price;
+
+
+      document.getElementById(
+        "adminCategory"
+      ).value =
+        product.category;
+
+
+      document.getElementById(
+        "adminImage"
+      ).value =
+        product.image;
+
+
+      document.getElementById(
+        "adminDescription"
+      ).value =
+        product.description || "";
+
+
+      document
+        .getElementById("productForm")
+        .scrollIntoView({
+          behavior: "smooth"
+        });
 
     }
 
 
+    /* =========================================
+       ADMIN DELETE
+    ========================================= */
+
     function deleteProduct(id) {
 
       const product =
-        products.find(item => item.id === id);
+        products.find(
+          item => item.id === id
+        );
 
-      if (!product) return;
+
+      if (!product) {
+        return;
+      }
 
 
-      const confirmed =
+      const confirmDelete =
         confirm(
           "Delete " +
           product.name +
@@ -3249,7 +3031,9 @@
         );
 
 
-      if (!confirmed) return;
+      if (!confirmDelete) {
+        return;
+      }
 
 
       products =
@@ -3264,51 +3048,27 @@
 
       renderAdminProducts();
 
-      showToast("Product deleted.");
-
-    }
-
-
-    function resetProducts() {
-
-      const confirmed =
-        confirm(
-          "Reset all products to the original 5 products?"
-        );
-
-
-      if (!confirmed) return;
-
-
-      products =
-        JSON.parse(
-          JSON.stringify(defaultProducts)
-        );
-
-
-      saveProductsToStorage();
-
-      renderProducts();
-
-      renderAdminProducts();
-
-      showToast("Default products restored.");
+      showToast(
+        "Product deleted."
+      );
 
     }
 
 
     /* =========================================
-       ESCAPE HTML
+       ADMIN RESET FORM
     ========================================= */
 
-    function escapeHTML(value) {
+    function resetProductForm() {
 
-      return String(value)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
+      document
+        .getElementById("productForm")
+        .reset();
+
+
+      document.getElementById(
+        "editProductId"
+      ).value = "";
 
     }
 
@@ -3323,21 +3083,31 @@
     function showToast(message) {
 
       const toast =
-        document.getElementById("toast");
+        document.getElementById(
+          "toast"
+        );
 
 
-      toast.textContent = message;
+      toast.textContent =
+        message;
 
-      toast.classList.add("show");
+
+      toast.classList.add(
+        "show"
+      );
 
 
-      clearTimeout(toastTimer);
+      clearTimeout(
+        toastTimer
+      );
 
 
       toastTimer =
         setTimeout(() => {
 
-          toast.classList.remove("show");
+          toast.classList.remove(
+            "show"
+          );
 
         }, 2500);
 
@@ -3345,28 +3115,76 @@
 
 
     /* =========================================
-       INITIALIZE
+       KEYBOARD / MODAL
+    ========================================= */
+
+    document.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (
+          event.key === "Escape"
+        ) {
+
+          closeCart();
+
+          closeProductModal();
+
+        }
+
+      }
+    );
+
+
+    /* =========================================
+       ADMIN ACCESS
+       
+       Open website URL with:
+       #admin
+       
+       Example:
+       yourwebsite.com/#admin
+    ========================================= */
+
+    function checkAdminHash() {
+
+      if (
+        window.location.hash
+          .toLowerCase() === "#admin"
+      ) {
+
+        toggleAdmin();
+
+      }
+
+    }
+
+
+    /* =========================================
+       INITIAL LOAD
     ========================================= */
 
     renderProducts();
 
-    renderAdminProducts();
-
     updateCart();
+
+    checkAdminHash();
 
   </script>
 
 
-  <!-- FLOATING WHATSAPP -->
+  <!--
+    =============================================
+    ADMIN ACCESS
 
-  <a
-    href="https://wa.me/919919326178"
-    target="_blank"
-    class="floating-whatsapp"
-    aria-label="WhatsApp"
-  >
-    💬
-  </a>
+    To open Product Management:
+    Add #admin at the end of your website URL.
+
+    Example:
+    https://jain-bartan-store.vercel.app/#admin
+
+    =============================================
+  -->
 
 </body>
 </html>
